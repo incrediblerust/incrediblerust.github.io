@@ -1,0 +1,89 @@
+# Site settings
+title: Rust School
+email: contact@rustschool.github.io
+description: >-
+  The premier destination for people looking to learn and master the Rust programming language.
+  Learn Rust through practical examples and hands-on exercises.
+baseurl: ""
+url: "https://rustschool.github.io"
+
+# Multilingual settings
+languages: ["en", "pt", "es"]
+default_lang: "en"
+exclude_from_localization: ["assets", "vendor"]
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  lessons:
+    output: true
+    permalink: /:collection/:name/
+  lessons_pt:
+    output: true
+    permalink: /pt/:collection/:name/
+  lessons_es:
+    output: true
+    permalink: /es/:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "lessons"
+    values:
+      layout: "lesson"
+      lang: "en"
+  - scope:
+      path: ""
+      type: "lessons_pt"
+    values:
+      layout: "lesson"
+      lang: "pt"
+  - scope:
+      path: ""
+      type: "lessons_es"
+    values:
+      layout: "lesson"
+      lang: "es"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - LICENSE
+
+# Kramdown settings
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+
+# Site data
+version: "1.0.0"
+rust_version: "1.85.0"

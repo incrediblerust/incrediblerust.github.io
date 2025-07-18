@@ -1,0 +1,231 @@
+{% assign lang = page.lang | default: site.default_lang %}
+{% assign t = site.data.translations[lang] %}
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>{% if page.title %}{{ page.title | escape }} - {{ t.site_title | escape }}{% else %}{{ t.site_title | escape }}{% endif %}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ t.description }}{% endif %}">
+    
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+    
+    {% seo %}
+    {% feed_meta %}
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ '/assets/favicon.ico' | relative_url }}">
+    
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="{{ '/assets/css/syntax.css' | relative_url }}">
+</head>
+
+<body>
+    <div class="container">
+        <header class="site-header">
+            <div class="wrapper">
+                {% if lang == 'en' %}
+                    <a class="site-title" href="{{ '/' | relative_url }}">
+                        <span class="rust-logo">🦀</span>
+                        {{ t.site_title }}
+                    </a>
+                {% elsif lang == 'pt' %}
+                    <a class="site-title" href="{{ '/pt/' | relative_url }}">
+                        <span class="rust-logo">🦀</span>
+                        {{ t.site_title }}
+                    </a>
+                {% elsif lang == 'es' %}
+                    <a class="site-title" href="{{ '/es/' | relative_url }}">
+                        <span class="rust-logo">🦀</span>
+                        {{ t.site_title }}
+                    </a>
+                {% endif %}
+                
+                <nav class="site-nav">
+                    <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+                    <label for="nav-trigger">
+                        <span class="menu-icon">
+                            <svg viewBox="0 0 18 15" width="18px" height="15px">
+                                <path fill="#424242" d="m18,1.484c0,0.82-0.665,1.484-1.484,1.484h-15.031c-0.82,0-1.484-0.665-1.484-1.484s0.665-1.484,1.484-1.484h15.031c0.82,0,1.484,0.665,1.484,1.484zm0,5.515c0,0.82-0.665,1.484-1.484,1.484h-15.031c-0.82,0-1.484-0.665-1.484-1.484s0.665-1.484,1.484-1.484h15.031c0.82,0,1.484,0.665,1.484,1.484zm0,5.515c0,0.82-0.665,1.484-1.484,1.484h-15.031c-0.82,0-1.484-0.665-1.484-1.484s0.665-1.484,1.484-1.484h15.031c0.82,0,1.484,0.665,1.484,1.484z"/>
+                            </svg>
+                        </span>
+                    </label>
+                    
+                    <div class="trigger">
+                        {% if lang == 'en' %}
+                            <a class="page-link" href="{{ '/lessons/' | relative_url }}">{{ t.nav.lessons }}</a>
+                            <a class="page-link" href="{{ '/blog/' | relative_url }}">{{ t.nav.blog }}</a>
+                            <a class="page-link" href="{{ '/about/' | relative_url }}">{{ t.nav.about }}</a>
+                        {% elsif lang == 'pt' %}
+                            <a class="page-link" href="{{ '/pt/lessons/' | relative_url }}">{{ t.nav.lessons }}</a>
+                            <a class="page-link" href="{{ '/pt/blog/' | relative_url }}">{{ t.nav.blog }}</a>
+                            <a class="page-link" href="{{ '/pt/about/' | relative_url }}">{{ t.nav.about }}</a>
+                        {% elsif lang == 'es' %}
+                            <a class="page-link" href="{{ '/es/lessons/' | relative_url }}">{{ t.nav.lessons }}</a>
+                            <a class="page-link" href="{{ '/es/blog/' | relative_url }}">{{ t.nav.blog }}</a>
+                            <a class="page-link" href="{{ '/es/about/' | relative_url }}">{{ t.nav.about }}</a>
+                        {% endif %}
+                        <a class="page-link" href="https://github.com/rustschool/rustschool" target="_blank">{{ t.nav.github }}</a>
+                        
+                        <!-- Language Switcher -->
+                        <div class="language-switcher">
+                            <button class="lang-button" onclick="toggleLanguageMenu()">
+                                {{ t.languages[lang] }} ▼
+                            </button>
+                            <div class="lang-menu" id="langMenu">
+                                {% assign current_page = page.url | remove_first: "/pt" | remove_first: "/es" %}
+                                <a href="{{ current_page }}" class="lang-option">{{ site.data.translations.en.languages.en }}</a>
+                                <a href="{{ '/pt' | append: current_page | relative_url }}" class="lang-option">{{ site.data.translations.pt.languages.pt }}</a>
+                                <a href="{{ '/es' | append: current_page | relative_url }}" class="lang-option">{{ site.data.translations.es.languages.es }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main class="page-content" aria-label="Content">
+            <div class="wrapper">
+                {{ content }}
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="wrapper">
+                <div class="footer-col-wrapper">
+                    <div class="footer-col footer-col-1">
+                        <ul class="contact-list">
+                            <li>{{ site.title | escape }}</li>
+                            <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col footer-col-2">
+                        <ul class="social-media-list">
+                            <li><a href="https://github.com/rustschool" target="_blank">GitHub</a></li>
+                            <li><a href="https://doc.rust-lang.org/" target="_blank">Rust Documentation</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col footer-col-3">
+                        <p>{{ site.description | escape }}</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        // Language switcher functionality
+        function toggleLanguageMenu() {
+            const menu = document.getElementById('langMenu');
+            menu.classList.toggle('show');
+        }
+        
+        // Close menu when clicking outside
+        window.onclick = function(event) {
+            if (!event.target.matches('.lang-button')) {
+                const dropdowns = document.getElementsByClassName("lang-menu");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+        // Modern scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        // Initialize animations when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add animation classes to elements
+            const features = document.querySelectorAll('.feature');
+            const sections = document.querySelectorAll('h2, h3, p, .lesson-category');
+            
+            [...features, ...sections].forEach((el, index) => {
+                el.classList.add('animate-on-scroll');
+                observer.observe(el);
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add loading animation
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.5s ease';
+                document.body.style.opacity = '1';
+            }, 100);
+
+            // Parallax effect for hero background
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                window.addEventListener('scroll', () => {
+                    const scrolled = window.pageYOffset;
+                    const parallax = scrolled * 0.3;
+                    hero.style.transform = `translateY(${parallax}px)`;
+                });
+            }
+
+            // Add hover sound effect simulation (visual feedback)
+            const interactiveElements = document.querySelectorAll('.cta-button, .feature, .page-link');
+            interactiveElements.forEach(element => {
+                element.addEventListener('mouseenter', function() {
+                    this.style.filter = 'brightness(1.1)';
+                });
+                element.addEventListener('mouseleave', function() {
+                    this.style.filter = 'brightness(1)';
+                });
+            });
+
+            // Progress bar for reading
+            if (document.querySelector('.lesson-content')) {
+                const progressBar = document.createElement('div');
+                progressBar.className = 'reading-progress';
+                progressBar.innerHTML = '<div class="reading-progress-fill"></div>';
+                document.body.appendChild(progressBar);
+
+                window.addEventListener('scroll', () => {
+                    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                    const scrolled = (winScroll / height) * 100;
+                    document.querySelector('.reading-progress-fill').style.width = scrolled + '%';
+                });
+            }
+        });
+
+        // Performance optimization - reduce animations on low-end devices
+        if (navigator.hardwareConcurrency <= 2) {
+            document.documentElement.style.setProperty('--transition-slow', '0.2s');
+            document.documentElement.style.setProperty('--transition-normal', '0.15s');
+        }
+    </script>
+</body>
+</html>

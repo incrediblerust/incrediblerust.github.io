@@ -1,0 +1,131 @@
+en:
+  site_title: "Rust School"
+  tagline: "Learn Rust Programming"
+  description: "The premier destination for people looking to learn and master the Rust programming language."
+  nav:
+    lessons: "Lessons"
+    blog: "Blog"
+    about: "About"
+    github: "GitHub"
+  languages:
+    en: "English"
+    pt: "Português"
+    es: "Español"
+  hero:
+    title: "Welcome to Rust School"
+    subtitle: "The premier destination for people looking to learn and master the Rust programming language. Learn through practical examples, hands-on exercises, and beginner-friendly tutorials."
+    cta: "Start Learning Rust"
+  features:
+    beginner_title: "Beginner Friendly"
+    beginner_desc: "Start from the basics with clear explanations and simple examples. No prior systems programming experience required."
+    examples_title: "Practical Examples"
+    examples_desc: "Learn by doing with hundreds of code examples you can run and modify. Every concept is demonstrated with working code."
+    progressive_title: "Progressive Learning"
+    progressive_desc: "Structured curriculum that builds from fundamentals to advanced topics. Master ownership, borrowing, and fearless concurrency step by step."
+    realworld_title: "Real-World Focus"
+    realworld_desc: "Learn Rust concepts that matter in practice. Build confidence with testing, error handling, and project organization."
+    comprehensive_title: "Comprehensive Coverage"
+    comprehensive_desc: "From \"Hello World\" to advanced topics like unsafe code and macros. Everything you need to become proficient in Rust."
+    opensource_title: "Open Source"
+    opensource_desc: "Community-driven content that's always improving. Contribute lessons, fix errors, and help others learn Rust."
+  sections:
+    getting_started: "Getting Started"
+    fundamentals: "Rust Fundamentals"
+    ownership: "Ownership System"
+    complex_programs: "Building Complex Programs"
+  footer:
+    contact: "Contact"
+    resources: "Resources"
+  lesson:
+    edit: "Edit this lesson on GitHub"
+    previous: "Previous"
+    next: "Next"
+    try_yourself: "Try It Yourself"
+
+pt:
+  site_title: "Rust School"
+  tagline: "Aprenda Programação Rust"
+  description: "O destino principal para pessoas que desejam aprender e dominar a linguagem de programação Rust."
+  nav:
+    lessons: "Lições"
+    blog: "Blog"
+    about: "Sobre"
+    github: "GitHub"
+  languages:
+    en: "English"
+    pt: "Português"
+    es: "Español"
+  hero:
+    title: "Bem-vindo à Rust School"
+    subtitle: "O destino principal para pessoas que desejam aprender e dominar a linguagem de programação Rust. Aprenda através de exemplos práticos, exercícios interativos e tutoriais amigáveis para iniciantes."
+    cta: "Comece a Aprender Rust"
+  features:
+    beginner_title: "Amigável para Iniciantes"
+    beginner_desc: "Comece do básico com explicações claras e exemplos simples. Nenhuma experiência prévia em programação de sistemas é necessária."
+    examples_title: "Exemplos Práticos"
+    examples_desc: "Aprenda fazendo com centenas de exemplos de código que você pode executar e modificar. Cada conceito é demonstrado com código funcional."
+    progressive_title: "Aprendizado Progressivo"
+    progressive_desc: "Currículo estruturado que vai do fundamental ao avançado. Domine ownership, borrowing e concorrência sem medo passo a passo."
+    realworld_title: "Foco no Mundo Real"
+    realworld_desc: "Aprenda conceitos de Rust que importam na prática. Ganhe confiança com testes, tratamento de erros e organização de projetos."
+    comprehensive_title: "Cobertura Abrangente"
+    comprehensive_desc: "De \"Olá Mundo\" a tópicos avançados como código unsafe e macros. Tudo que você precisa para se tornar proficiente em Rust."
+    opensource_title: "Código Aberto"
+    opensource_desc: "Conteúdo dirigido pela comunidade que está sempre melhorando. Contribua com lições, corrija erros e ajude outros a aprender Rust."
+  sections:
+    getting_started: "Primeiros Passos"
+    fundamentals: "Fundamentos do Rust"
+    ownership: "Sistema de Ownership"
+    complex_programs: "Construindo Programas Complexos"
+  footer:
+    contact: "Contato"
+    resources: "Recursos"
+  lesson:
+    edit: "Editar esta lição no GitHub"
+    previous: "Anterior"
+    next: "Próximo"
+    try_yourself: "Experimente Você Mesmo"
+
+es:
+  site_title: "Rust School"
+  tagline: "Aprende Programación Rust"
+  description: "El destino principal para personas que desean aprender y dominar el lenguaje de programación Rust."
+  nav:
+    lessons: "Lecciones"
+    blog: "Blog"
+    about: "Acerca de"
+    github: "GitHub"
+  languages:
+    en: "English"
+    pt: "Português"
+    es: "Español"
+  hero:
+    title: "Bienvenido a Rust School"
+    subtitle: "El destino principal para personas que desean aprender y dominar el lenguaje de programación Rust. Aprende a través de ejemplos prácticos, ejercicios interactivos y tutoriales amigables para principiantes."
+    cta: "Comenzar a Aprender Rust"
+  features:
+    beginner_title: "Amigable para Principiantes"
+    beginner_desc: "Comienza desde lo básico con explicaciones claras y ejemplos simples. No se requiere experiencia previa en programación de sistemas."
+    examples_title: "Ejemplos Prácticos"
+    examples_desc: "Aprende haciendo con cientos de ejemplos de código que puedes ejecutar y modificar. Cada concepto se demuestra con código funcional."
+    progressive_title: "Aprendizaje Progresivo"
+    progressive_desc: "Currículo estructurado que va de lo fundamental a lo avanzado. Domina ownership, borrowing y concurrencia sin miedo paso a paso."
+    realworld_title: "Enfoque en el Mundo Real"
+    realworld_desc: "Aprende conceptos de Rust que importan en la práctica. Gana confianza con pruebas, manejo de errores y organización de proyectos."
+    comprehensive_title: "Cobertura Integral"
+    comprehensive_desc: "Desde \"Hola Mundo\" hasta temas avanzados como código unsafe y macros. Todo lo que necesitas para volverte competente en Rust."
+    opensource_title: "Código Abierto"
+    opensource_desc: "Contenido dirigido por la comunidad que siempre está mejorando. Contribuye con lecciones, corrige errores y ayuda a otros a aprender Rust."
+  sections:
+    getting_started: "Primeros Pasos"
+    fundamentals: "Fundamentos de Rust"
+    ownership: "Sistema de Ownership"
+    complex_programs: "Construyendo Programas Complejos"
+  footer:
+    contact: "Contacto"
+    resources: "Recursos"
+  lesson:
+    edit: "Editar esta lección en GitHub"
+    previous: "Anterior"
+    next: "Siguiente"
+    try_yourself: "Inténtalo Tú Mismo"
