@@ -1,8 +1,8 @@
-# 🦀 Rust School
+# 🦀 The Incredible Rust
 
-[![Deploy to GitHub Pages](https://github.com/rustschool/rustschool/actions/workflows/jekyll-gh-pages.yml/badge.svg)](https://github.com/rustschool/rustschool/actions/workflows/jekyll-gh-pages.yml)
+[![Deploy to GitHub Pages](https://github.com/incrediblerust/incrediblerust.github.io/actions/workflows/jekyll-gh-pages.yml/badge.svg)](https://github.com/incrediblerust/incrediblerust.github.io/actions/workflows/jekyll-gh-pages.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Website](https://img.shields.io/website?url=https%3A//rustschool.github.io)](https://rustschool.github.io)
+[![Website](https://img.shields.io/website?url=https%3A//incrediblerust.github.io)](https://incrediblerust.github.io)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
 > The premier destination for people looking to learn and master the Rust programming language. Learn through practical examples, hands-on exercises, and beginner-friendly tutorials.
@@ -13,19 +13,19 @@
 
 ### 📖 For Learners
 
-Visit **[rustschool.github.io](https://rustschool.github.io)** to start your Rust journey!
+Visit **[incrediblerust.github.io](https://incrediblerust.github.io)** to start your Rust journey!
 
 **Choose your language:**
-- 🇺🇸 [English](https://rustschool.github.io) - `rustschool.github.io`
-- 🇧🇷 [Português](https://rustschool.github.io/pt/) - `rustschool.github.io/pt/`
-- 🇪🇸 [Español](https://rustschool.github.io/es/) - `rustschool.github.io/es/`
+- 🇺🇸 [English](https://incrediblerust.github.io) - `incrediblerust.github.io`
+- 🇧🇷 [Português](https://incrediblerust.github.io/pt/) - `incrediblerust.github.io/pt/`
+- 🇪🇸 [Español](https://incrediblerust.github.io/es/) - `incrediblerust.github.io/es/`
 
 ### 🛠️ For Developers
 
 ```bash
 # Clone the repository
-git clone https://github.com/rustschool/rustschool.git
-cd rustschool
+git clone https://github.com/incrediblerust/incrediblerust.github.io.git
+cd incrediblerust
 
 # Install dependencies
 bundle install
@@ -139,8 +139,8 @@ bundle exec jekyll serve
 gem install bundler
 
 # 2. Clone and setup
-git clone https://github.com/rustschool/rustschool.git
-cd rustschool
+git clone https://github.com/incrediblerust/incrediblerust.github.io.git
+cd incrediblerust
 bundle install
 
 # 3. Run development server
@@ -153,7 +153,7 @@ open http://localhost:4000
 ### 📁 Project Structure
 
 ```
-rustschool/
+incrediblerust/
 ├── 📄 _config.yml           # Jekyll configuration
 ├── 📊 _data/
 │   └── translations.yml     # Multi-language translations
@@ -196,14 +196,14 @@ rustschool/
 We welcome all types of contributions! Here's how you can help:
 
 ### 🐛 **Bug Reports**
-Found something broken? [Open an issue](https://github.com/rustschool/rustschool/issues/new) with:
+Found something broken? [Open an issue](https://github.com/incrediblerust/incrediblerust.github.io/issues/new) with:
 - Clear description of the problem
 - Steps to reproduce
 - Expected vs actual behavior
 - Screenshots (if applicable)
 
 ### ✨ **Feature Requests**
-Have an idea? [Start a discussion](https://github.com/rustschool/rustschool/discussions) about:
+Have an idea? [Start a discussion](https://github.com/incrediblerust/incrediblerust.github.io/discussions) about:
 - What problem does this solve?
 - How should it work?
 - Are there alternatives?
@@ -267,7 +267,7 @@ touch _lessons_es/mi-nueva-leccion.md
 
 ### 🤖 Automatic Deployment
 
-Every push to `main` automatically deploys to [rustschool.github.io](https://rustschool.github.io) via GitHub Actions.
+Every push to `main` automatically deploys to [incrediblerust.github.io](https://incrediblerust.github.io) via GitHub Actions.
 
 ### 🔧 Manual Deployment
 
@@ -426,8 +426,8 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 Thanks to all the amazing people who contribute to making Rust accessible:
 
 <!-- This section would be automatically generated -->
-<a href="https://github.com/rustschool/rustschool/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=rustschool/rustschool" />
+<a href="https://github.com/incrediblerust/incrediblerust.github.io/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=incrediblerust/incrediblerust.github.io" />
 </a>
 
 *Want to see your name here? [Contribute to the project!](CONTRIBUTING.md)*
@@ -440,7 +440,7 @@ Ready to learn Rust? Choose your language and dive in:
 
 <div align="center">
 
-**[🇺🇸 Start in English](https://rustschool.github.io)** | **[🇧🇷 Começar em Português](https://rustschool.github.io/pt/)** | **[🇪🇸 Empezar en Español](https://rustschool.github.io/es/)**
+**[🇺🇸 Start in English](https://incrediblerust.github.io)** | **[🇧🇷 Começar em Português](https://incrediblerust.github.io/pt/)** | **[🇪🇸 Empezar en Español](https://incrediblerust.github.io/es/)**
 
 ### Happy Learning! 🦀
 

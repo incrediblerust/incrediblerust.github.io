@@ -1,5 +1,5 @@
 en:
-  site_title: "Rust School"
+  site_title: "The Incredible Rust"
   tagline: "Learn Rust Programming"
   description: "The premier destination for people looking to learn and master the Rust programming language."
   nav:
@@ -12,7 +12,7 @@ en:
     pt: "Português"
     es: "Español"
   hero:
-    title: "Welcome to Rust School"
+    title: "Welcome to The Incredible Rust"
     subtitle: "The premier destination for people looking to learn and master the Rust programming language. Learn through practical examples, hands-on exercises, and beginner-friendly tutorials."
     cta: "Start Learning Rust"
   features:
@@ -43,7 +43,7 @@ en:
     try_yourself: "Try It Yourself"
 
 pt:
-  site_title: "Rust School"
+  site_title: "O Incrível Rust"
   tagline: "Aprenda Programação Rust"
   description: "O destino principal para pessoas que desejam aprender e dominar a linguagem de programação Rust."
   nav:
@@ -56,7 +56,7 @@ pt:
     pt: "Português"
     es: "Español"
   hero:
-    title: "Bem-vindo à Rust School"
+    title: "Bem-vindo ao Incrível Rust"
     subtitle: "O destino principal para pessoas que desejam aprender e dominar a linguagem de programação Rust. Aprenda através de exemplos práticos, exercícios interativos e tutoriais amigáveis para iniciantes."
     cta: "Comece a Aprender Rust"
   features:
@@ -87,7 +87,7 @@ pt:
     try_yourself: "Experimente Você Mesmo"
 
 es:
-  site_title: "Rust School"
+  site_title: "El Increíble Rust"
   tagline: "Aprende Programación Rust"
   description: "El destino principal para personas que desean aprender y dominar el lenguaje de programación Rust."
   nav:
@@ -100,7 +100,7 @@ es:
     pt: "Português"
     es: "Español"
   hero:
-    title: "Bienvenido a Rust School"
+    title: "Bienvenido al Increíble Rust"
     subtitle: "El destino principal para personas que desean aprender y dominar el lenguaje de programación Rust. Aprende a través de ejemplos prácticos, ejercicios interactivos y tutoriales amigables para principiantes."
     cta: "Comenzar a Aprender Rust"
   features:

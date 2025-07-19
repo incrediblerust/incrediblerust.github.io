@@ -9,7 +9,7 @@ lang: es
         <div class="hero-logo">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Original_Ferris.svg/800px-Original_Ferris.svg.png" alt="Ferris el Cangrejo de Rust" width="100" height="100" style="margin-bottom: 1rem;">
         </div>
-        <h1>Bienvenido a Rust School</h1>
+        <h1>Bienvenido al Increíble Rust</h1>
         <p>El destino principal para personas que desean aprender y dominar el lenguaje de programación Rust. Aprende a través de ejemplos prácticos, ejercicios interactivos y tutoriales amigables para principiantes.</p>
         <a href="{{ '/es/lessons/instalacion/' | relative_url }}" class="cta-button">Comenzar a Aprender Rust</a>
     </div>

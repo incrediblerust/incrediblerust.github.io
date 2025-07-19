@@ -1,11 +1,10 @@
 # Site settings
-title: Rust School
-email: contact@rustschool.github.io
+title: The Incredible Rust
 description: >-
   The premier destination for people looking to learn and master the Rust programming language.
   Learn Rust through practical examples and hands-on exercises.
 baseurl: ""
-url: "https://rustschool.github.io"
+url: "https://incrediblerust.github.io"
 
 # Multilingual settings
 languages: ["en", "pt", "es"]

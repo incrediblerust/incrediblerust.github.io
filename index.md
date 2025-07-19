@@ -8,7 +8,7 @@ title: Learn Rust Programming
         <div class="hero-logo">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Original_Ferris.svg/800px-Original_Ferris.svg.png" alt="Ferris the Rust Crab" width="100" height="100" style="margin-bottom: 1rem;">
         </div>
-        <h1>Welcome to Rust School</h1>
+        <h1>Welcome to The Incredible Rust</h1>
         <p>The premier destination for people looking to learn and master the Rust programming language. Learn through practical examples, hands-on exercises, and beginner-friendly tutorials.</p>
         <a href="{{ '/lessons/installation/' | relative_url }}" class="cta-button">Start Learning Rust</a>
     </div>

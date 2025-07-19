@@ -4,9 +4,9 @@ title: Lições
 lang: pt
 ---
 
-# Lições da Rust School
+# Lições do Incrível Rust
 
-Bem-vindo ao currículo completo da Rust School! Nossas lições são organizadas de forma progressiva, começando com os conceitos básicos e avançando para tópicos mais complexos.
+Bem-vindo ao currículo completo do Incrível Rust! Nossas lições são organizadas de forma progressiva, começando com os conceitos básicos e avançando para tópicos mais complexos.
 
 ## 🌱 Primeiros Passos
 

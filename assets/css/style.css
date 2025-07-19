@@ -326,14 +326,14 @@ body::before {
     position: absolute;
     right: 0;
     top: calc(100% + 8px);
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(20px);
     min-width: 140px;
     border-radius: 12px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
     overflow: hidden;
-    z-index: 1000;
+    z-index: 9999;
     opacity: 0;
     transform: translateY(-10px) scale(0.95);
     visibility: hidden;
@@ -353,15 +353,17 @@ body::before {
     text-decoration: none;
     display: block;
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: 600;
     transition: all var(--transition-fast) var(--smooth);
     position: relative;
+    border-left: 3px solid transparent;
 }
 
 .lang-option:hover {
-    background: linear-gradient(135deg, var(--sea-foam), rgba(168, 218, 220, 0.3));
-    color: var(--rust-red);
+    background: linear-gradient(135deg, var(--rust-orange), rgba(210, 105, 30, 0.1));
+    color: white;
     transform: translateX(4px);
+    border-left-color: var(--rust-red);
 }
 
 /* Main content */

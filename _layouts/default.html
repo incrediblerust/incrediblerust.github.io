@@ -57,18 +57,15 @@
                     <div class="trigger">
                         {% if lang == 'en' %}
                             <a class="page-link" href="{{ '/lessons/' | relative_url }}">{{ t.nav.lessons }}</a>
-                            <a class="page-link" href="{{ '/blog/' | relative_url }}">{{ t.nav.blog }}</a>
                             <a class="page-link" href="{{ '/about/' | relative_url }}">{{ t.nav.about }}</a>
                         {% elsif lang == 'pt' %}
                             <a class="page-link" href="{{ '/pt/lessons/' | relative_url }}">{{ t.nav.lessons }}</a>
-                            <a class="page-link" href="{{ '/pt/blog/' | relative_url }}">{{ t.nav.blog }}</a>
                             <a class="page-link" href="{{ '/pt/about/' | relative_url }}">{{ t.nav.about }}</a>
                         {% elsif lang == 'es' %}
                             <a class="page-link" href="{{ '/es/lessons/' | relative_url }}">{{ t.nav.lessons }}</a>
-                            <a class="page-link" href="{{ '/es/blog/' | relative_url }}">{{ t.nav.blog }}</a>
                             <a class="page-link" href="{{ '/es/about/' | relative_url }}">{{ t.nav.about }}</a>
                         {% endif %}
-                        <a class="page-link" href="https://github.com/rustschool/rustschool" target="_blank">{{ t.nav.github }}</a>
+                        <a class="page-link" href="https://github.com/incrediblerust/incrediblerust.github.io" target="_blank">{{ t.nav.github }}</a>
                         
                         <!-- Language Switcher -->
                         <div class="language-switcher">
@@ -99,13 +96,12 @@
                     <div class="footer-col footer-col-1">
                         <ul class="contact-list">
                             <li>{{ site.title | escape }}</li>
-                            <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
                         </ul>
                     </div>
                     
                     <div class="footer-col footer-col-2">
                         <ul class="social-media-list">
-                            <li><a href="https://github.com/rustschool" target="_blank">GitHub</a></li>
+                            <li><a href="https://github.com/incrediblerust" target="_blank">GitHub</a></li>
                             <li><a href="https://doc.rust-lang.org/" target="_blank">Rust Documentation</a></li>
                         </ul>
                     </div>
