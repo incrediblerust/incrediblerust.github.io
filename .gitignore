@@ -30,3 +30,4 @@ Thumbs.db
 # Local development
 .env
 .env.local
+CLAUDE.md
