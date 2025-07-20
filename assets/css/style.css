@@ -287,18 +287,21 @@ body::before {
 }
 
 .lang-button {
-    background: rgba(255, 255, 255, 0.15);
+    background: var(--charcoal);
     color: white;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 10px 16px;
-    border-radius: 8px;
+    border: 2px solid var(--rust-orange);
+    padding: 6px 12px;
+    border-radius: 20px;
     cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 0.8rem;
+    font-weight: 600;
     transition: all var(--transition-normal) var(--smooth);
-    backdrop-filter: blur(10px);
     position: relative;
     overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    min-width: 60px;
+    text-align: center;
 }
 
 .lang-button::before {
@@ -318,20 +321,21 @@ body::before {
 
 .lang-button:hover {
     transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    background: var(--rust-orange);
+    border-color: var(--rust-red);
+    box-shadow: 0 4px 12px rgba(210, 105, 30, 0.4);
+    color: white;
 }
 
 .lang-menu {
     position: absolute;
     right: 0;
     top: calc(100% + 8px);
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(20px);
-    min-width: 140px;
-    border-radius: 12px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
-    border: 1px solid rgba(255,255,255,0.3);
+    background: var(--charcoal);
+    min-width: 120px;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    border: 2px solid var(--rust-orange);
     overflow: hidden;
     z-index: 9999;
     opacity: 0;
@@ -348,22 +352,27 @@ body::before {
 }
 
 .lang-option {
-    color: var(--charcoal);
-    padding: 12px 16px;
+    color: white;
+    padding: 8px 12px;
     text-decoration: none;
     display: block;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 600;
     transition: all var(--transition-fast) var(--smooth);
     position: relative;
-    border-left: 3px solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: center;
 }
 
 .lang-option:hover {
-    background: linear-gradient(135deg, var(--rust-orange), rgba(210, 105, 30, 0.1));
+    background: var(--rust-orange);
     color: white;
-    transform: translateX(4px);
-    border-left-color: var(--rust-red);
+    transform: scale(1.05);
+}
+
+.lang-option:not(:last-child) {
+    border-bottom: 1px solid rgba(210, 105, 30, 0.3);
 }
 
 /* Main content */
@@ -375,13 +384,13 @@ body::before {
 /* Home page */
 .hero {
     text-align: center;
-    padding: 5rem 0;
+    padding: 3rem 0;
     background: linear-gradient(135deg, 
         rgba(241, 250, 238, 0.9) 0%, 
         rgba(168, 218, 220, 0.8) 30%, 
         rgba(46, 134, 171, 0.9) 100%);
-    margin-bottom: 4rem;
-    border-radius: 20px;
+    margin-bottom: 3rem;
+    border-radius: 16px;
     position: relative;
     overflow: hidden;
     backdrop-filter: blur(20px);
@@ -423,7 +432,7 @@ body::before {
 }
 
 .hero-logo {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     animation: bounceIn var(--transition-slow) var(--bounce) 0.5s both;
 }
 
@@ -439,8 +448,8 @@ body::before {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
     color: var(--charcoal);
     background: linear-gradient(135deg, var(--charcoal) 0%, var(--ocean-dark) 100%);
     -webkit-background-clip: text;
@@ -453,11 +462,11 @@ body::before {
 }
 
 .hero p {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: var(--ocean-dark);
-    max-width: 650px;
-    margin: 0 auto 2.5rem;
-    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
     font-weight: 400;
     text-shadow: 0 1px 2px rgba(255,255,255,0.8);
     animation: fadeInUp var(--transition-slow) var(--smooth) 0.6s both;
@@ -467,15 +476,15 @@ body::before {
     display: inline-block;
     background: linear-gradient(135deg, var(--rust-orange) 0%, var(--coral) 100%);
     color: white;
-    padding: 16px 32px;
+    padding: 12px 24px;
     text-decoration: none;
-    border-radius: 12px;
+    border-radius: 8px;
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1rem;
     position: relative;
     overflow: hidden;
     transition: all var(--transition-normal) var(--smooth);
-    box-shadow: 0 8px 24px rgba(210, 105, 30, 0.3);
+    box-shadow: 0 6px 20px rgba(210, 105, 30, 0.3);
     border: 2px solid transparent;
     animation: fadeInUp var(--transition-slow) var(--smooth) 0.8s both;
 }
@@ -510,16 +519,16 @@ body::before {
 }
 
 .feature {
-    padding: 2.5rem;
-    background: rgba(255, 255, 255, 0.7);
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
-    border-radius: 16px;
+    border-radius: 12px;
     text-align: center;
-    border: 1px solid rgba(168, 218, 220, 0.3);
+    border: 2px solid rgba(210, 105, 30, 0.2);
     position: relative;
     overflow: hidden;
     transition: all var(--transition-normal) var(--smooth);
-    box-shadow: 0 4px 16px rgba(38, 70, 83, 0.1);
+    box-shadow: 0 6px 20px rgba(38, 70, 83, 0.15);
     animation: fadeInUp var(--transition-slow) var(--smooth);
 }
 
@@ -541,10 +550,10 @@ body::before {
 }
 
 .feature:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 16px 40px rgba(38, 70, 83, 0.2);
-    border-color: var(--sea-foam);
-    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(210, 105, 30, 0.2);
+    border-color: var(--rust-orange);
+    background: white;
 }
 
 .feature:nth-child(1) { animation-delay: 0.1s; }
@@ -555,26 +564,27 @@ body::before {
 .feature:nth-child(6) { animation-delay: 0.6s; }
 
 .feature h3 {
-    color: var(--rust-red);
-    margin-bottom: 1.5rem;
-    font-size: 1.4rem;
+    color: var(--charcoal);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
     font-weight: 700;
     transition: all var(--transition-normal) var(--smooth);
 }
 
 .feature:hover h3 {
     transform: scale(1.05);
-    color: var(--rust-orange);
+    color: var(--rust-red);
 }
 
 .feature p {
-    color: var(--charcoal);
+    color: var(--ocean-dark);
     line-height: 1.6;
+    font-weight: 500;
     transition: all var(--transition-normal) var(--smooth);
 }
 
 .feature:hover p {
-    color: var(--ocean-dark);
+    color: var(--charcoal);
 }
 
 /* Lesson layout */
@@ -1103,6 +1113,133 @@ button:focus, a:focus, input:focus, textarea:focus, select:focus {
     
     .feature h3 {
         font-size: 1.2rem;
+    }
+}
+
+/* Learning Path Section */
+.learning-path {
+    margin: 4rem 0;
+}
+
+.learning-path h2 {
+    text-align: center;
+    color: var(--charcoal);
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, var(--charcoal) 0%, var(--rust-orange) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.path-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.path-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 2rem;
+    border: 2px solid rgba(210, 105, 30, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: all var(--transition-normal) var(--smooth);
+    box-shadow: 0 4px 16px rgba(38, 70, 83, 0.1);
+}
+
+.path-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--rust-orange), var(--coral));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-normal) var(--smooth);
+}
+
+.path-card:hover::before {
+    transform: scaleX(1);
+}
+
+.path-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--rust-orange);
+    box-shadow: 0 8px 24px rgba(210, 105, 30, 0.15);
+    background: white;
+}
+
+.path-card h3 {
+    color: var(--charcoal);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.path-card p {
+    color: var(--ocean-dark);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.path-lessons {
+    list-style: none;
+}
+
+.path-lessons li {
+    margin-bottom: 0.75rem;
+}
+
+.path-lessons a {
+    color: var(--charcoal);
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    display: block;
+    transition: all var(--transition-fast) var(--smooth);
+    border-left: 3px solid transparent;
+    font-weight: 500;
+}
+
+.path-lessons a:hover {
+    background: rgba(210, 105, 30, 0.1);
+    border-left-color: var(--rust-orange);
+    color: var(--rust-red);
+    transform: translateX(4px);
+}
+
+.path-lessons em {
+    color: var(--ocean-dark);
+    font-style: italic;
+    opacity: 0.7;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+    display: block;
+}
+
+.path-card:nth-child(1) { animation-delay: 0.1s; }
+.path-card:nth-child(2) { animation-delay: 0.2s; }
+.path-card:nth-child(3) { animation-delay: 0.3s; }
+.path-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Responsive Learning Path */
+@media screen and (max-width: 768px) {
+    .path-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .path-card {
+        padding: 1.5rem;
     }
 }
 

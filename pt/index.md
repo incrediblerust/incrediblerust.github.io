@@ -47,37 +47,52 @@ lang: pt
     </div>
 </div>
 
-## Caminho de Aprendizado
+<div class="learning-path">
+<h2>Caminho de Aprendizado</h2>
 
-### 🌱 Primeiros Passos
-Perfeito para iniciantes completos em programação Rust.
+<div class="path-grid">
+    <div class="path-card animate-on-scroll">
+        <h3>🌱 Primeiros Passos</h3>
+        <p>Perfeito para iniciantes completos em programação Rust.</p>
+        <ul class="path-lessons">
+            <li><a href="{{ '/pt/lessons_pt/instalacao/' | relative_url }}">Instalação</a></li>
+            <li><a href="{{ '/pt/lessons_pt/ola-mundo/' | relative_url }}">Olá Mundo</a></li>
+        </ul>
+    </div>
 
-- [Instalação]({{ '/pt/lessons/instalacao/' | relative_url }})
-- [Olá Mundo]({{ '/pt/lessons/ola-mundo/' | relative_url }})
-- [Gerenciador de Pacotes Cargo]({{ '/pt/lessons/cargo/' | relative_url }})
+    <div class="path-card animate-on-scroll">
+        <h3>🏗️ Fundamentos do Rust</h3>
+        <p>Conceitos centrais que todo programador Rust deve conhecer.</p>
+        <ul class="path-lessons">
+            <li><a href="{{ '/pt/lessons_pt/variaveis/' | relative_url }}">Variáveis e Mutabilidade</a></li>
+            <li><em>Em breve - Tipos de Dados</em></li>
+            <li><em>Em breve - Funções</em></li>
+            <li><em>Em breve - Controle de Fluxo</em></li>
+        </ul>
+    </div>
 
-### 🏗️ Fundamentos do Rust
-Conceitos centrais que todo programador Rust deve conhecer.
+    <div class="path-card animate-on-scroll">
+        <h3>🎯 Sistema de Ownership</h3>
+        <p>A abordagem única do Rust para segurança de memória.</p>
+        <ul class="path-lessons">
+            <li><em>Em breve - Entendendo Ownership</em></li>
+            <li><em>Em breve - Referências e Borrowing</em></li>
+            <li><em>Em breve - Slices</em></li>
+        </ul>
+    </div>
 
-- [Variáveis e Mutabilidade]({{ '/pt/lessons/variaveis/' | relative_url }})
-- [Tipos de Dados]({{ '/pt/lessons/tipos-de-dados/' | relative_url }})
-- [Funções]({{ '/pt/lessons/funcoes/' | relative_url }})
-- [Controle de Fluxo]({{ '/pt/lessons/controle-de-fluxo/' | relative_url }})
-
-### 🎯 Sistema de Ownership
-A abordagem única do Rust para segurança de memória.
-
-- [Entendendo Ownership]({{ '/pt/lessons/ownership/' | relative_url }})
-- [Referências e Borrowing]({{ '/pt/lessons/referencias/' | relative_url }})
-- [Slices]({{ '/pt/lessons/slices/' | relative_url }})
-
-### 🔧 Construindo Programas Complexos
-Organize código e lide com complexidade.
-
-- [Structs]({{ '/pt/lessons/structs/' | relative_url }})
-- [Enums e Pattern Matching]({{ '/pt/lessons/enums/' | relative_url }})
-- [Módulos e Pacotes]({{ '/pt/lessons/modulos/' | relative_url }})
-- [Tratamento de Erros]({{ '/pt/lessons/tratamento-de-erros/' | relative_url }})
+    <div class="path-card animate-on-scroll">
+        <h3>🔧 Construindo Programas Complexos</h3>
+        <p>Organize código e lide com complexidade.</p>
+        <ul class="path-lessons">
+            <li><em>Em breve - Structs</em></li>
+            <li><em>Em breve - Enums e Pattern Matching</em></li>
+            <li><em>Em breve - Módulos e Pacotes</em></li>
+            <li><em>Em breve - Tratamento de Erros</em></li>
+        </ul>
+    </div>
+</div>
+</div>
 
 ## Por Que Aprender Rust?
 

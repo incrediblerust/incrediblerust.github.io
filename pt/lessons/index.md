@@ -12,18 +12,18 @@ Bem-vindo ao currículo completo do Incrível Rust! Nossas lições são organiz
 
 Comece sua jornada Rust aqui. Essas lições cobrem o básico absoluto:
 
-- [**Instalação**]({{ '/pt/lessons/instalacao/' | relative_url }}) - Configure seu ambiente de desenvolvimento Rust
-- [**Olá Mundo**]({{ '/pt/lessons/ola-mundo/' | relative_url }}) - Escreva e execute seu primeiro programa Rust
-- [**Gerenciador de Pacotes Cargo**]({{ '/pt/lessons/cargo/' | relative_url }}) - Aprenda a usar o sistema de build do Rust
+- [**Instalação**]({{ '/pt/lessons_pt/instalacao/' | relative_url }}) - Configure seu ambiente de desenvolvimento Rust
+- [**Olá Mundo**]({{ '/pt/lessons_pt/ola-mundo/' | relative_url }}) - Escreva e execute seu primeiro programa Rust
+- *Em breve - Gerenciador de Pacotes Cargo* - Aprenda a usar o sistema de build do Rust
 
 ## 🏗️ Fundamentos do Rust
 
 Conceitos centrais que todo programador Rust deve dominar:
 
-- [**Variáveis e Mutabilidade**]({{ '/pt/lessons/variaveis/' | relative_url }}) - Entenda a abordagem única do Rust para dados
-- [**Tipos de Dados**]({{ '/pt/lessons/tipos-de-dados/' | relative_url }}) - Explore o sistema de tipos do Rust
-- [**Funções**]({{ '/pt/lessons/funcoes/' | relative_url }}) - Organize código com funções
-- [**Controle de Fluxo**]({{ '/pt/lessons/controle-de-fluxo/' | relative_url }}) - Condicionais e loops
+- [**Variáveis e Mutabilidade**]({{ '/pt/lessons_pt/variaveis/' | relative_url }}) - Entenda a abordagem única do Rust para dados
+- *Em breve - Tipos de Dados* - Explore o sistema de tipos do Rust
+- *Em breve - Funções* - Organize código com funções
+- *Em breve - Controle de Fluxo* - Condicionais e loops
 
 ## 🎯 Sistema de Ownership
 
@@ -42,12 +42,22 @@ Organize e estruture aplicações maiores:
 - [**Módulos e Pacotes**]({{ '/pt/lessons/modulos/' | relative_url }}) - Organize seu código
 - [**Tratamento de Erros**]({{ '/pt/lessons/tratamento-de-erros/' | relative_url }}) - Lide com falhas graciosamente
 
+## 🚀 Tópicos Avançados
+
+Leve suas habilidades em Rust para o próximo nível com programação de sistemas avançada:
+
+- [**Fundamentos de Programação de Rede**]({{ '/lessons/networking-fundamentals/' | relative_url }}) - TCP/UDP, HTTP, WebSockets e networking assíncrono
+- [**Sistemas Distribuídos com Rust**]({{ '/lessons/distributed-systems/' | relative_url }}) - Microsserviços, algoritmos de consenso e streaming de eventos
+- [**Desenvolvimento Blockchain**]({{ '/lessons/blockchain-development/' | relative_url }}) - Construa aplicações blockchain do zero
+- [**Machine Learning com Rust**]({{ '/lessons/machine-learning/' | relative_url }}) - Algoritmos de ML, redes neurais e processamento de dados
+
 ## 📈 Caminho de Aprendizado Recomendado
 
 1. **Comece com Primeiros Passos** - Configure seu ambiente e familiarize-se com Rust
 2. **Domine os Fundamentos** - Aprenda sintaxe básica e conceitos
 3. **Entenda Ownership** - Esta é a parte mais importante para dominar Rust
 4. **Construa Programas Reais** - Use structs, enums e módulos para criar aplicações
+5. **Explore Tópicos Avançados** - Mergulhe em networking, sistemas distribuídos, blockchain e machine learning
 
 ## 💡 Dicas para o Sucesso
 

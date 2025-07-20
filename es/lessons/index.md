@@ -12,9 +12,9 @@ lang: es
 
 Comienza tu viaje en Rust aquí. Estas lecciones cubren lo básico absoluto:
 
-- [**Instalación**]({{ '/es/lessons/instalacion/' | relative_url }}) - Configura tu entorno de desarrollo Rust
-- [**Hola Mundo**]({{ '/es/lessons/hola-mundo/' | relative_url }}) - Escribe y ejecuta tu primer programa Rust
-- [**Gestor de Paquetes Cargo**]({{ '/es/lessons/cargo/' | relative_url }}) - Aprende a usar el sistema de construcción de Rust
+- [**Instalación**]({{ '/es/lessons_es/instalacion/' | relative_url }}) - Configura tu entorno de desarrollo Rust
+- [**Hola Mundo**]({{ '/es/lessons_es/hola-mundo/' | relative_url }}) - Escribe y ejecuta tu primer programa Rust
+- *Próximamente - Gestor de Paquetes Cargo* - Aprende a usar el sistema de construcción de Rust
 
 ## 🏗️ Fundamentos de Rust
 
@@ -42,12 +42,22 @@ Organiza y estructura aplicaciones más grandes:
 - [**Módulos y Paquetes**]({{ '/es/lessons/modulos/' | relative_url }}) - Organiza tu código
 - [**Manejo de Errores**]({{ '/es/lessons/manejo-de-errores/' | relative_url }}) - Maneja fallas elegantemente
 
+## 🚀 Temas Avanzados
+
+Lleva tus habilidades de Rust al siguiente nivel con programación de sistemas avanzada:
+
+- [**Fundamentos de Programación de Red**]({{ '/lessons/networking-fundamentals/' | relative_url }}) - TCP/UDP, HTTP, WebSockets y networking asíncrono
+- [**Sistemas Distribuidos con Rust**]({{ '/lessons/distributed-systems/' | relative_url }}) - Microservicios, algoritmos de consenso y transmisión de eventos
+- [**Desarrollo de Blockchain**]({{ '/lessons/blockchain-development/' | relative_url }}) - Construye aplicaciones blockchain desde cero
+- [**Machine Learning con Rust**]({{ '/lessons/machine-learning/' | relative_url }}) - Algoritmos de ML, redes neuronales y procesamiento de datos
+
 ## 📈 Ruta de Aprendizaje Recomendada
 
 1. **Comienza con Primeros Pasos** - Configura tu entorno y familiarízate con Rust
 2. **Domina los Fundamentos** - Aprende sintaxis básica y conceptos
 3. **Entiende Ownership** - Esta es la parte más importante para dominar Rust
 4. **Construye Programas Reales** - Usa structs, enums y módulos para crear aplicaciones
+5. **Explora Temas Avanzados** - Sumérgete en networking, sistemas distribuidos, blockchain y machine learning
 
 ## 💡 Consejos para el Éxito
 

@@ -46,37 +46,51 @@ title: Learn Rust Programming
     </div>
 </div>
 
-## Learning Path
+<div class="learning-path">
+<h2>Learning Path</h2>
 
-### 🌱 Getting Started
-Perfect for complete beginners to Rust programming.
+<div class="path-grid">
+    <div class="path-card animate-on-scroll">
+        <h3>🌱 Getting Started</h3>
+        <p>Perfect for complete beginners to Rust programming.</p>
+        <ul class="path-lessons">
+            <li><a href="{{ '/lessons/installation/' | relative_url }}">Installation</a></li>
+            <li><a href="{{ '/lessons/hello-world/' | relative_url }}">Hello World</a></li>
+            <li><a href="{{ '/lessons/cargo/' | relative_url }}">Cargo Package Manager</a></li>
+        </ul>
+    </div>
 
-- [Installation]({{ '/lessons/installation/' | relative_url }})
-- [Hello World]({{ '/lessons/hello-world/' | relative_url }})
-- [Cargo Package Manager]({{ '/lessons/cargo/' | relative_url }})
+    <div class="path-card animate-on-scroll">
+        <h3>🏗️ Rust Fundamentals</h3>
+        <p>Core concepts every Rust programmer must know.</p>
+        <ul class="path-lessons">
+            <li><a href="{{ '/lessons/variables/' | relative_url }}">Variables and Mutability</a></li>
+            <li><a href="{{ '/lessons/data-types/' | relative_url }}">Data Types</a></li>
+        </ul>
+    </div>
 
-### 🏗️ Rust Fundamentals
-Core concepts every Rust programmer must know.
+    <div class="path-card animate-on-scroll">
+        <h3>🎯 Ownership System</h3>
+        <p>Rust's unique approach to memory safety.</p>
+        <ul class="path-lessons">
+            <li><em>Coming soon - Understanding Ownership</em></li>
+            <li><em>Coming soon - References and Borrowing</em></li>
+            <li><em>Coming soon - Slices</em></li>
+        </ul>
+    </div>
 
-- [Variables and Mutability]({{ '/lessons/variables/' | relative_url }})
-- [Data Types]({{ '/lessons/data-types/' | relative_url }})
-- [Functions]({{ '/lessons/functions/' | relative_url }})
-- [Control Flow]({{ '/lessons/control-flow/' | relative_url }})
-
-### 🎯 Ownership System
-Rust's unique approach to memory safety.
-
-- [Understanding Ownership]({{ '/lessons/ownership/' | relative_url }})
-- [References and Borrowing]({{ '/lessons/references/' | relative_url }})
-- [Slices]({{ '/lessons/slices/' | relative_url }})
-
-### 🔧 Building Complex Programs
-Organize code and handle complexity.
-
-- [Structs]({{ '/lessons/structs/' | relative_url }})
-- [Enums and Pattern Matching]({{ '/lessons/enums/' | relative_url }})
-- [Modules and Packages]({{ '/lessons/modules/' | relative_url }})
-- [Error Handling]({{ '/lessons/error-handling/' | relative_url }})
+    <div class="path-card animate-on-scroll">
+        <h3>🔧 Building Complex Programs</h3>
+        <p>Organize code and handle complexity.</p>
+        <ul class="path-lessons">
+            <li><em>Coming soon - Structs</em></li>
+            <li><em>Coming soon - Enums and Pattern Matching</em></li>
+            <li><em>Coming soon - Modules and Packages</em></li>
+            <li><em>Coming soon - Error Handling</em></li>
+        </ul>
+    </div>
+</div>
+</div>
 
 ## Why Learn Rust?
 
