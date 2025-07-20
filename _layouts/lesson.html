@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% assign lang = page.lang | default: site.default_lang %}
+{% if page.lang %}{% assign lang = page.lang %}{% else %}{% assign lang = site.default_lang %}{% endif %}
 {% assign t = site.data.translations[lang] %}
 
 <div class="lesson-container">

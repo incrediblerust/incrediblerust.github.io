@@ -4,29 +4,76 @@ title: Learn Rust Programming
 ---
 
 <div class="hero">
+    <div class="hero-background">
+        <div class="hero-particles"></div>
+        <div class="hero-gradient"></div>
+    </div>
     <div class="hero-content">
+        <div class="hero-badge">
+            <span class="badge-icon">🦀</span>
+            <span class="badge-text">Learn Rust Programming</span>
+        </div>
         <div class="hero-logo">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Original_Ferris.svg/800px-Original_Ferris.svg.png" alt="Ferris the Rust Crab" width="120" height="120">
         </div>
-        <h1>Master Rust Programming</h1>
-        <p>The ultimate learning platform for Rust programming. From beginner-friendly tutorials to advanced systems programming - unlock the power of safe, fast, and concurrent programming.</p>
+        <h1>Master <span class="highlight-text">Rust Programming</span></h1>
+        <p class="hero-subtitle">The ultimate learning platform for Rust programming. From beginner-friendly tutorials to advanced systems programming - unlock the power of safe, fast, and concurrent programming.</p>
+        
+        <div class="hero-features">
+            <div class="hero-feature">
+                <span class="feature-icon">⚡</span>
+                <span>Zero-cost abstractions</span>
+            </div>
+            <div class="hero-feature">
+                <span class="feature-icon">🛡️</span>
+                <span>Memory safety</span>
+            </div>
+            <div class="hero-feature">
+                <span class="feature-icon">🧵</span>
+                <span>Fearless concurrency</span>
+            </div>
+        </div>
+        
         <div class="hero-stats">
             <div class="stat">
-                <div class="stat-number">15+</div>
+                <div class="stat-number" data-count="15">0</div>
                 <div class="stat-label">Interactive Lessons</div>
             </div>
             <div class="stat">
-                <div class="stat-number">4</div>
+                <div class="stat-number" data-count="4">0</div>
                 <div class="stat-label">Learning Tracks</div>
             </div>
             <div class="stat">
-                <div class="stat-number">3</div>
+                <div class="stat-number" data-count="3">0</div>
                 <div class="stat-label">Languages</div>
             </div>
+            <div class="stat">
+                <div class="stat-number" data-count="1000">0</div>
+                <div class="stat-label">Students</div>
+            </div>
         </div>
-        <a href="{{ '/lessons/' | relative_url }}" class="cta-button">
-            Start Your Journey
-        </a>
+        
+        <div class="hero-actions">
+            <a href="{{ '/lessons/' | relative_url }}" class="cta-button primary">
+                <span>Start Your Journey</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M4.167 10h11.666M10 4.167L15.833 10 10 15.833" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <a href="#why-rust" class="cta-button secondary">
+                <span>Learn More</span>
+            </a>
+        </div>
+        
+        <div class="hero-social-proof">
+            <p>Trusted by developers at</p>
+            <div class="companies">
+                <span>Microsoft</span>
+                <span>Google</span>
+                <span>Facebook</span>
+                <span>Dropbox</span>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -122,40 +169,108 @@ title: Learn Rust Programming
 </div>
 </div>
 
-<div class="why-rust">
-    <h2>Why Choose Rust?</h2>
+<section class="why-rust" id="why-rust">
+    <div class="section-header">
+        <h2>Why Choose <span class="highlight-text">Rust</span>?</h2>
+        <p class="section-subtitle">Discover what makes Rust the future of systems programming</p>
+    </div>
+    
     <div class="why-rust-grid">
-        <div class="why-rust-item animate-on-scroll">
-            <h3>⚡ Blazing Performance</h3>
-            <p>Zero-cost abstractions, minimal runtime, and memory efficiency that rivals C and C++ without sacrificing safety.</p>
+        <div class="why-rust-item animate-on-scroll" data-aos="fade-up" data-aos-delay="100">
+            <div class="item-icon">
+                <div class="icon-bg performance"></div>
+                <span class="icon">⚡</span>
+            </div>
+            <div class="item-content">
+                <h3>Blazing Performance</h3>
+                <p>Zero-cost abstractions, minimal runtime, and memory efficiency that rivals C and C++ without sacrificing safety.</p>
+                <div class="item-stats">
+                    <span class="stat-highlight">2x faster</span> than Python
+                </div>
+            </div>
         </div>
         
-        <div class="why-rust-item animate-on-scroll">
-            <h3>🛡️ Memory Safety</h3>
-            <p>Eliminate entire categories of bugs with Rust's ownership system. No null pointer dereferences, buffer overflows, or use-after-free errors.</p>
+        <div class="why-rust-item animate-on-scroll" data-aos="fade-up" data-aos-delay="200">
+            <div class="item-icon">
+                <div class="icon-bg safety"></div>
+                <span class="icon">🛡️</span>
+            </div>
+            <div class="item-content">
+                <h3>Memory Safety</h3>
+                <p>Eliminate entire categories of bugs with Rust's ownership system. No null pointer dereferences, buffer overflows, or use-after-free errors.</p>
+                <div class="item-stats">
+                    <span class="stat-highlight">70%</span> fewer security bugs
+                </div>
+            </div>
         </div>
         
-        <div class="why-rust-item animate-on-scroll">
-            <h3>🧵 Fearless Concurrency</h3>
-            <p>Write concurrent code with confidence. Rust's type system prevents data races and ensures thread safety at compile time.</p>
+        <div class="why-rust-item animate-on-scroll" data-aos="fade-up" data-aos-delay="300">
+            <div class="item-icon">
+                <div class="icon-bg concurrency"></div>
+                <span class="icon">🧵</span>
+            </div>
+            <div class="item-content">
+                <h3>Fearless Concurrency</h3>
+                <p>Write concurrent code with confidence. Rust's type system prevents data races and ensures thread safety at compile time.</p>
+                <div class="item-stats">
+                    <span class="stat-highlight">Zero</span> data races
+                </div>
+            </div>
         </div>
         
-        <div class="why-rust-item animate-on-scroll">
-            <h3>🏗️ Rich Ecosystem</h3>
-            <p>Growing library ecosystem with excellent package management. From web servers to embedded systems, Rust has you covered.</p>
+        <div class="why-rust-item animate-on-scroll" data-aos="fade-up" data-aos-delay="400">
+            <div class="item-icon">
+                <div class="icon-bg ecosystem"></div>
+                <span class="icon">🏗️</span>
+            </div>
+            <div class="item-content">
+                <h3>Rich Ecosystem</h3>
+                <p>Growing library ecosystem with excellent package management. From web servers to embedded systems, Rust has you covered.</p>
+                <div class="item-stats">
+                    <span class="stat-highlight">100k+</span> crates available
+                </div>
+            </div>
         </div>
         
-        <div class="why-rust-item animate-on-scroll">
-            <h3>🎯 Developer Experience</h3>
-            <p>Helpful compiler messages, integrated testing, documentation generation, and a formatter that keeps your code clean.</p>
+        <div class="why-rust-item animate-on-scroll" data-aos="fade-up" data-aos-delay="500">
+            <div class="item-icon">
+                <div class="icon-bg developer"></div>
+                <span class="icon">🎯</span>
+            </div>
+            <div class="item-content">
+                <h3>Developer Experience</h3>
+                <p>Helpful compiler messages, integrated testing, documentation generation, and a formatter that keeps your code clean.</p>
+                <div class="item-stats">
+                    <span class="stat-highlight">Best</span> error messages
+                </div>
+            </div>
         </div>
         
-        <div class="why-rust-item animate-on-scroll">
-            <h3>💼 Industry Adoption</h3>
-            <p>Used by tech giants like Microsoft, Google, Facebook, and Dropbox. From system programming to web development.</p>
+        <div class="why-rust-item animate-on-scroll" data-aos="fade-up" data-aos-delay="600">
+            <div class="item-icon">
+                <div class="icon-bg industry"></div>
+                <span class="icon">💼</span>
+            </div>
+            <div class="item-content">
+                <h3>Industry Adoption</h3>
+                <p>Used by tech giants like Microsoft, Google, Facebook, and Dropbox. From system programming to web development.</p>
+                <div class="item-stats">
+                    <span class="stat-highlight">500+</span> companies using Rust
+                </div>
+            </div>
         </div>
     </div>
-</div>
+    
+    <div class="why-rust-cta">
+        <p>Ready to experience the power of Rust?</p>
+        <a href="{{ '/lessons/installation/' | relative_url }}" class="cta-button primary">
+            <span>Get Started Now</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M4.167 10h11.666M10 4.167L15.833 10 10 15.833" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+    </div>
+</section>
 
 <div class="showcase">
     <h2>Learn with Real Examples</h2>

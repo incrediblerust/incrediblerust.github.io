@@ -18,12 +18,24 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ '/assets/favicon.ico' | relative_url }}">
+    <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon.svg' | relative_url }}">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="{{ '/manifest.json' | relative_url }}">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#D34516">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Incredible Rust">
+    <link rel="apple-touch-icon" href="{{ '/assets/favicon.svg' | relative_url }}">
     
     <!-- Syntax highlighting -->
     <link rel="stylesheet" href="{{ '/assets/css/syntax.css' | relative_url }}">
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <div class="container">
         <header class="site-header">
             <div class="wrapper">
@@ -67,12 +79,18 @@
                         {% endif %}
                         <a class="page-link" href="https://github.com/incrediblerust/incrediblerust.github.io" target="_blank">{{ t.nav.github }}</a>
                         
-                        <!-- Language Switcher -->
+                        <!-- Modern Language Switcher -->
                         <div class="language-switcher">
-                            <button class="lang-button" onclick="toggleLanguageMenu()">
-                                {{ t.languages[lang] }} ▼
+                            <button class="lang-button" onclick="toggleLanguageMenu()" aria-label="Select Language" aria-expanded="false">
+                                <span class="lang-flag">
+                                    {% if lang == 'en' %}🇺🇸{% elsif lang == 'pt' %}🇧🇷{% elsif lang == 'es' %}🇪🇸{% endif %}
+                                </span>
+                                <span class="lang-text">{{ t.languages[lang] }}</span>
+                                <svg class="lang-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                                    <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
                             </button>
-                            <div class="lang-menu" id="langMenu">
+                            <div class="lang-menu" id="langMenu" role="menu">
                                 {% assign current_page = page.url %}
                                 {% if current_page contains '/pt/' %}
                                     {% assign base_page = current_page | remove_first: '/pt' %}
@@ -83,13 +101,37 @@
                                 {% endif %}
                                 
                                 {% if base_page == '/' %}
-                                    <a href="{{ '/' | relative_url }}" class="lang-option">{{ site.data.translations.en.languages.en }}</a>
-                                    <a href="{{ '/pt/' | relative_url }}" class="lang-option">{{ site.data.translations.pt.languages.pt }}</a>
-                                    <a href="{{ '/es/' | relative_url }}" class="lang-option">{{ site.data.translations.es.languages.es }}</a>
+                                    <a href="{{ '/' | relative_url }}" class="lang-option {% if lang == 'en' %}active{% endif %}" role="menuitem">
+                                        <span class="lang-flag">🇺🇸</span>
+                                        <span class="lang-name">{{ site.data.translations.en.languages.en }}</span>
+                                        <span class="lang-native">English</span>
+                                    </a>
+                                    <a href="{{ '/pt/' | relative_url }}" class="lang-option {% if lang == 'pt' %}active{% endif %}" role="menuitem">
+                                        <span class="lang-flag">🇧🇷</span>
+                                        <span class="lang-name">{{ site.data.translations.pt.languages.pt }}</span>
+                                        <span class="lang-native">Português</span>
+                                    </a>
+                                    <a href="{{ '/es/' | relative_url }}" class="lang-option {% if lang == 'es' %}active{% endif %}" role="menuitem">
+                                        <span class="lang-flag">🇪🇸</span>
+                                        <span class="lang-name">{{ site.data.translations.es.languages.es }}</span>
+                                        <span class="lang-native">Español</span>
+                                    </a>
                                 {% else %}
-                                    <a href="{{ base_page | relative_url }}" class="lang-option">{{ site.data.translations.en.languages.en }}</a>
-                                    <a href="{{ '/pt' | append: base_page | relative_url }}" class="lang-option">{{ site.data.translations.pt.languages.pt }}</a>
-                                    <a href="{{ '/es' | append: base_page | relative_url }}" class="lang-option">{{ site.data.translations.es.languages.es }}</a>
+                                    <a href="{{ base_page | relative_url }}" class="lang-option {% if lang == 'en' %}active{% endif %}" role="menuitem">
+                                        <span class="lang-flag">🇺🇸</span>
+                                        <span class="lang-name">{{ site.data.translations.en.languages.en }}</span>
+                                        <span class="lang-native">English</span>
+                                    </a>
+                                    <a href="{{ '/pt' | append: base_page | relative_url }}" class="lang-option {% if lang == 'pt' %}active{% endif %}" role="menuitem">
+                                        <span class="lang-flag">🇧🇷</span>
+                                        <span class="lang-name">{{ site.data.translations.pt.languages.pt }}</span>
+                                        <span class="lang-native">Português</span>
+                                    </a>
+                                    <a href="{{ '/es' | append: base_page | relative_url }}" class="lang-option {% if lang == 'es' %}active{% endif %}" role="menuitem">
+                                        <span class="lang-flag">🇪🇸</span>
+                                        <span class="lang-name">{{ site.data.translations.es.languages.es }}</span>
+                                        <span class="lang-native">Español</span>
+                                    </a>
                                 {% endif %}
                             </div>
                         </div>
@@ -98,7 +140,7 @@
             </div>
         </header>
 
-        <main class="page-content" aria-label="Content">
+        <main class="page-content" aria-label="Content" id="main-content">
             <div class="wrapper">
                 {{ content }}
             </div>
@@ -129,24 +171,64 @@
     </div>
     
     <script>
-        // Language switcher functionality
+        // Modern Language switcher functionality
         function toggleLanguageMenu() {
             const menu = document.getElementById('langMenu');
-            menu.classList.toggle('show');
-        }
-        
-        // Close menu when clicking outside
-        window.onclick = function(event) {
-            if (!event.target.matches('.lang-button')) {
-                const dropdowns = document.getElementsByClassName("lang-menu");
-                for (let i = 0; i < dropdowns.length; i++) {
-                    const openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
+            const button = document.querySelector('.lang-button');
+            const arrow = document.querySelector('.lang-arrow');
+            const isOpen = menu.classList.contains('show');
+            
+            if (isOpen) {
+                menu.classList.remove('show');
+                button.setAttribute('aria-expanded', 'false');
+                arrow.style.transform = 'rotate(0deg)';
+            } else {
+                menu.classList.add('show');
+                button.setAttribute('aria-expanded', 'true');
+                arrow.style.transform = 'rotate(180deg)';
             }
         }
+        
+        // Enhanced click outside handler
+        document.addEventListener('click', function(event) {
+            const switcher = document.querySelector('.language-switcher');
+            const menu = document.getElementById('langMenu');
+            const button = document.querySelector('.lang-button');
+            const arrow = document.querySelector('.lang-arrow');
+            
+            if (!switcher.contains(event.target) && menu.classList.contains('show')) {
+                menu.classList.remove('show');
+                button.setAttribute('aria-expanded', 'false');
+                arrow.style.transform = 'rotate(0deg)';
+            }
+        });
+        
+        // Keyboard navigation for language menu
+        document.addEventListener('keydown', function(event) {
+            const menu = document.getElementById('langMenu');
+            const button = document.querySelector('.lang-button');
+            const options = menu.querySelectorAll('.lang-option');
+            
+            if (event.key === 'Escape' && menu.classList.contains('show')) {
+                menu.classList.remove('show');
+                button.setAttribute('aria-expanded', 'false');
+                button.focus();
+            }
+            
+            if (event.key === 'ArrowDown' && menu.classList.contains('show')) {
+                event.preventDefault();
+                const focusedIndex = Array.from(options).findIndex(option => option === document.activeElement);
+                const nextIndex = focusedIndex < options.length - 1 ? focusedIndex + 1 : 0;
+                options[nextIndex].focus();
+            }
+            
+            if (event.key === 'ArrowUp' && menu.classList.contains('show')) {
+                event.preventDefault();
+                const focusedIndex = Array.from(options).findIndex(option => option === document.activeElement);
+                const prevIndex = focusedIndex > 0 ? focusedIndex - 1 : options.length - 1;
+                options[prevIndex].focus();
+            }
+        });
 
         // Modern scroll animations
         const observerOptions = {
@@ -204,31 +286,184 @@
                 });
             }
 
-            // Add hover sound effect simulation (visual feedback)
-            const interactiveElements = document.querySelectorAll('.cta-button, .feature, .page-link');
+            // Animated counters for stats
+            function animateCounters() {
+                const counters = document.querySelectorAll('.stat-number[data-count]');
+                
+                counters.forEach(counter => {
+                    const target = parseInt(counter.getAttribute('data-count'));
+                    const duration = 2000; // 2 seconds
+                    const increment = target / (duration / 16); // 60fps
+                    let current = 0;
+                    
+                    const updateCounter = () => {
+                        if (current < target) {
+                            current += increment;
+                            counter.textContent = Math.floor(current) + (target >= 1000 ? '+' : '');
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.textContent = target + (target >= 1000 ? '+' : '');
+                        }
+                    };
+                    
+                    // Start animation when element is visible
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                updateCounter();
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    });
+                    
+                    observer.observe(counter);
+                });
+            }
+            
+            // Enhanced hover effects
+            const interactiveElements = document.querySelectorAll('.cta-button, .feature, .page-link, .hero-feature');
             interactiveElements.forEach(element => {
                 element.addEventListener('mouseenter', function() {
-                    this.style.filter = 'brightness(1.1)';
+                    this.style.filter = 'brightness(1.05)';
+                    this.style.transform = this.style.transform + ' scale(1.02)';
                 });
                 element.addEventListener('mouseleave', function() {
                     this.style.filter = 'brightness(1)';
+                    this.style.transform = this.style.transform.replace(' scale(1.02)', '');
                 });
             });
-
-            // Progress bar for reading
-            if (document.querySelector('.lesson-content')) {
-                const progressBar = document.createElement('div');
-                progressBar.className = 'reading-progress';
-                progressBar.innerHTML = '<div class="reading-progress-fill"></div>';
-                document.body.appendChild(progressBar);
-
-                window.addEventListener('scroll', () => {
-                    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-                    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                    const scrolled = (winScroll / height) * 100;
-                    document.querySelector('.reading-progress-fill').style.width = scrolled + '%';
+            
+            // Initialize counter animation
+            animateCounters();
+            
+            // AOS (Animate On Scroll) implementation
+            function initAOS() {
+                const aosElements = document.querySelectorAll('[data-aos]');
+                
+                const aosObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('aos-animate');
+                        }
+                    });
+                }, {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                });
+                
+                aosElements.forEach(el => {
+                    aosObserver.observe(el);
                 });
             }
+            
+            // Initialize AOS
+            initAOS();
+            
+            // Register Service Worker for PWA functionality
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/sw.js')
+                        .then(registration => {
+                            console.log('SW registered: ', registration);
+                            
+                            // Check for updates
+                            registration.addEventListener('updatefound', () => {
+                                const newWorker = registration.installing;
+                                newWorker.addEventListener('statechange', () => {
+                                    if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                        // Show update notification
+                                        showUpdateNotification();
+                                    }
+                                });
+                            });
+                        })
+                        .catch(registrationError => {
+                            console.log('SW registration failed: ', registrationError);
+                        });
+                });
+            }
+            
+            // Show update notification
+            function showUpdateNotification() {
+                const notification = document.createElement('div');
+                notification.className = 'update-notification';
+                notification.innerHTML = `
+                    <div class="notification-content">
+                        <span>🎉 New content available!</span>
+                        <button onclick="updateApp()" class="update-btn">Update</button>
+                        <button onclick="dismissUpdate()" class="dismiss-btn">×</button>
+                    </div>
+                `;
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.classList.add('show');
+                }, 100);
+            }
+            
+            // Update app
+            window.updateApp = function() {
+                if ('serviceWorker' in navigator) {
+                    navigator.serviceWorker.getRegistration().then(registration => {
+                        if (registration && registration.waiting) {
+                            registration.waiting.postMessage({ type: 'SKIP_WAITING' });
+                            window.location.reload();
+                        }
+                    });
+                }
+            };
+            
+            // Dismiss update notification
+            window.dismissUpdate = function() {
+                const notification = document.querySelector('.update-notification');
+                if (notification) {
+                    notification.classList.remove('show');
+                    setTimeout(() => {
+                        notification.remove();
+                    }, 300);
+                }
+            };
+
+            // Enhanced Progress bar for reading
+            const progressBar = document.createElement('div');
+            progressBar.className = 'reading-progress';
+            progressBar.innerHTML = `
+                <div class="reading-progress-fill"></div>
+                <div class="reading-progress-glow"></div>
+            `;
+            document.body.appendChild(progressBar);
+
+            let ticking = false;
+            function updateProgress() {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = Math.min((winScroll / height) * 100, 100);
+                
+                const fill = document.querySelector('.reading-progress-fill');
+                const glow = document.querySelector('.reading-progress-glow');
+                
+                if (fill) {
+                    fill.style.width = scrolled + '%';
+                    fill.style.background = `linear-gradient(90deg, 
+                        var(--rust-orange) 0%, 
+                        var(--rust-orange-light) ${scrolled/2}%, 
+                        var(--rust-dark-blue) 100%)`;
+                }
+                
+                if (glow) {
+                    glow.style.width = scrolled + '%';
+                    glow.style.opacity = scrolled > 5 ? '1' : '0';
+                }
+                
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    requestAnimationFrame(updateProgress);
+                    ticking = true;
+                }
+            });
         });
 
         // Performance optimization - reduce animations on low-end devices

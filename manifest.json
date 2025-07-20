@@ -1,0 +1,75 @@
+{
+  "name": "The Incredible Rust - Learn Rust Programming",
+  "short_name": "Incredible Rust",
+  "description": "The premier destination for people looking to learn and master the Rust programming language. Learn through practical examples, hands-on exercises, and beginner-friendly tutorials.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FEFEFE",
+  "theme_color": "#D34516",
+  "orientation": "portrait-primary",
+  "categories": ["education", "developer", "programming"],
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "The Incredible Rust - Desktop View"
+    },
+    {
+      "src": "/assets/screenshot-narrow.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "The Incredible Rust - Mobile View"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Start Learning",
+      "short_name": "Lessons",
+      "description": "Jump straight to the lessons",
+      "url": "/lessons/",
+      "icons": [
+        {
+          "src": "/assets/favicon.svg",
+          "sizes": "any",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Installation Guide",
+      "short_name": "Install",
+      "description": "Set up your Rust development environment",
+      "url": "/lessons/installation/",
+      "icons": [
+        {
+          "src": "/assets/favicon.svg",
+          "sizes": "any",
+          "type": "image/svg+xml"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
+}
