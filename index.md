@@ -6,55 +6,57 @@ title: Learn Rust Programming
 <div class="hero">
     <div class="hero-content">
         <div class="hero-logo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Original_Ferris.svg/800px-Original_Ferris.svg.png" alt="Ferris the Rust Crab" width="100" height="100" style="margin-bottom: 1rem;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Original_Ferris.svg/800px-Original_Ferris.svg.png" alt="Ferris the Rust Crab" width="120" height="120">
         </div>
-        <h1>Welcome to The Incredible Rust</h1>
-        <p>The premier destination for people looking to learn and master the Rust programming language. Learn through practical examples, hands-on exercises, and beginner-friendly tutorials.</p>
-        <a href="{{ '/lessons/installation/' | relative_url }}" class="cta-button">Start Learning Rust</a>
+        <h1>Master Rust Programming</h1>
+        <p>The ultimate learning platform for Rust programming. From beginner-friendly tutorials to advanced systems programming - unlock the power of safe, fast, and concurrent programming.</p>
+        <a href="{{ '/lessons/installation/' | relative_url }}" class="cta-button">
+            Start Your Journey
+        </a>
     </div>
 </div>
 
 <div class="features">
-    <div class="feature">
-        <h3>🚀 Beginner Friendly</h3>
-        <p>Start from the basics with clear explanations and simple examples. No prior systems programming experience required.</p>
+    <div class="feature animate-on-scroll">
+        <h3>🚀 Zero to Hero</h3>
+        <p>Complete learning path from installation to advanced topics. No prior systems programming experience needed - just curiosity and determination.</p>
     </div>
     
-    <div class="feature">
-        <h3>📝 Practical Examples</h3>
-        <p>Learn by doing with hundreds of code examples you can run and modify. Every concept is demonstrated with working code.</p>
+    <div class="feature animate-on-scroll">
+        <h3>🛠️ Hands-On Learning</h3>
+        <p>Interactive code examples you can run, modify, and experiment with. Every concept comes with practical, real-world demonstrations.</p>
     </div>
     
-    <div class="feature">
-        <h3>🎯 Progressive Learning</h3>
-        <p>Structured curriculum that builds from fundamentals to advanced topics. Master ownership, borrowing, and fearless concurrency step by step.</p>
+    <div class="feature animate-on-scroll">
+        <h3>🎯 Progressive Mastery</h3>
+        <p>Carefully structured curriculum building from fundamentals to advanced systems programming. Master ownership, borrowing, and fearless concurrency.</p>
     </div>
     
-    <div class="feature">
-        <h3>🔧 Real-World Focus</h3>
-        <p>Learn Rust concepts that matter in practice. Build confidence with testing, error handling, and project organization.</p>
+    <div class="feature animate-on-scroll">
+        <h3>🌐 Production Ready</h3>
+        <p>Learn industry best practices, testing strategies, and project organization. Build confidence with real-world patterns and architectures.</p>
     </div>
     
-    <div class="feature">
-        <h3>📚 Comprehensive Coverage</h3>
-        <p>From "Hello World" to advanced topics like unsafe code and macros. Everything you need to become proficient in Rust.</p>
+    <div class="feature animate-on-scroll">
+        <h3>🔬 Advanced Topics</h3>
+        <p>Dive deep into networking, distributed systems, blockchain development, and machine learning. Push the boundaries of what's possible with Rust.</p>
     </div>
     
-    <div class="feature">
-        <h3>🌟 Open Source</h3>
-        <p>Community-driven content that's always improving. Contribute lessons, fix errors, and help others learn Rust.</p>
+    <div class="feature animate-on-scroll">
+        <h3>🌟 Community Driven</h3>
+        <p>Open source content that evolves with the community. Contribute lessons, suggest improvements, and help others on their Rust journey.</p>
     </div>
 </div>
 
 <div class="learning-path">
-<h2>Learning Path</h2>
+<h2>Your Learning Journey</h2>
 
 <div class="path-grid">
     <div class="path-card animate-on-scroll">
         <h3>🌱 Getting Started</h3>
-        <p>Perfect for complete beginners to Rust programming.</p>
+        <p>Perfect entry point for newcomers to Rust programming.</p>
         <ul class="path-lessons">
-            <li><a href="{{ '/lessons/installation/' | relative_url }}">Installation</a></li>
+            <li><a href="{{ '/lessons/installation/' | relative_url }}">Installation & Setup</a></li>
             <li><a href="{{ '/lessons/hello-world/' | relative_url }}">Hello World</a></li>
             <li><a href="{{ '/lessons/cargo/' | relative_url }}">Cargo Package Manager</a></li>
         </ul>
@@ -62,48 +64,137 @@ title: Learn Rust Programming
 
     <div class="path-card animate-on-scroll">
         <h3>🏗️ Rust Fundamentals</h3>
-        <p>Core concepts every Rust programmer must know.</p>
+        <p>Core concepts that form the foundation of Rust mastery.</p>
         <ul class="path-lessons">
-            <li><a href="{{ '/lessons/variables/' | relative_url }}">Variables and Mutability</a></li>
+            <li><a href="{{ '/lessons/variables/' | relative_url }}">Variables & Mutability</a></li>
             <li><a href="{{ '/lessons/data-types/' | relative_url }}">Data Types</a></li>
+            <li><em>Functions & Control Flow</em></li>
+            <li><em>Structs & Enums</em></li>
         </ul>
     </div>
 
     <div class="path-card animate-on-scroll">
         <h3>🎯 Ownership System</h3>
-        <p>Rust's unique approach to memory safety.</p>
+        <p>Rust's revolutionary approach to memory safety without garbage collection.</p>
         <ul class="path-lessons">
-            <li><em>Coming soon - Understanding Ownership</em></li>
-            <li><em>Coming soon - References and Borrowing</em></li>
-            <li><em>Coming soon - Slices</em></li>
+            <li><em>Understanding Ownership</em></li>
+            <li><em>References & Borrowing</em></li>
+            <li><em>Lifetimes & Slices</em></li>
+            <li><em>Smart Pointers</em></li>
         </ul>
     </div>
 
     <div class="path-card animate-on-scroll">
-        <h3>🔧 Building Complex Programs</h3>
-        <p>Organize code and handle complexity.</p>
+        <h3>🚀 Advanced Topics</h3>
+        <p>Master advanced systems programming and specialized domains.</p>
         <ul class="path-lessons">
-            <li><em>Coming soon - Structs</em></li>
-            <li><em>Coming soon - Enums and Pattern Matching</em></li>
-            <li><em>Coming soon - Modules and Packages</em></li>
-            <li><em>Coming soon - Error Handling</em></li>
+            <li><a href="{{ '/lessons/networking-fundamentals/' | relative_url }}">Network Programming</a></li>
+            <li><a href="{{ '/lessons/distributed-systems/' | relative_url }}">Distributed Systems</a></li>
+            <li><a href="{{ '/lessons/blockchain-development/' | relative_url }}">Blockchain Development</a></li>
+            <li><a href="{{ '/lessons/machine-learning/' | relative_url }}">Machine Learning</a></li>
         </ul>
     </div>
 </div>
 </div>
 
-## Why Learn Rust?
+<div class="why-rust">
+    <h2>Why Choose Rust?</h2>
+    <div class="why-rust-grid">
+        <div class="why-rust-item animate-on-scroll">
+            <h3>⚡ Blazing Performance</h3>
+            <p>Zero-cost abstractions, minimal runtime, and memory efficiency that rivals C and C++ without sacrificing safety.</p>
+        </div>
+        
+        <div class="why-rust-item animate-on-scroll">
+            <h3>🛡️ Memory Safety</h3>
+            <p>Eliminate entire categories of bugs with Rust's ownership system. No null pointer dereferences, buffer overflows, or use-after-free errors.</p>
+        </div>
+        
+        <div class="why-rust-item animate-on-scroll">
+            <h3>🧵 Fearless Concurrency</h3>
+            <p>Write concurrent code with confidence. Rust's type system prevents data races and ensures thread safety at compile time.</p>
+        </div>
+        
+        <div class="why-rust-item animate-on-scroll">
+            <h3>🏗️ Rich Ecosystem</h3>
+            <p>Growing library ecosystem with excellent package management. From web servers to embedded systems, Rust has you covered.</p>
+        </div>
+        
+        <div class="why-rust-item animate-on-scroll">
+            <h3>🎯 Developer Experience</h3>
+            <p>Helpful compiler messages, integrated testing, documentation generation, and a formatter that keeps your code clean.</p>
+        </div>
+        
+        <div class="why-rust-item animate-on-scroll">
+            <h3>💼 Industry Adoption</h3>
+            <p>Used by tech giants like Microsoft, Google, Facebook, and Dropbox. From system programming to web development.</p>
+        </div>
+    </div>
+</div>
 
-**Performance**: Rust is blazingly fast and memory-efficient with no runtime or garbage collector.
+## 🎯 Ready to Begin?
 
-**Safety**: Rich type system and ownership model guarantee memory-safety and thread-safety.
+Whether you're a complete beginner or an experienced developer, our curriculum adapts to your learning style. Start with our [Installation Guide]({{ '/lessons/installation/' | relative_url }}) to set up your development environment, or dive straight into [Hello World]({{ '/lessons/hello-world/' | relative_url }}) if you're ready to code.
 
-**Productivity**: Great documentation, friendly compiler with helpful error messages, and top-notch tooling.
+### 🌍 Global Community
 
-**Community**: Growing ecosystem of libraries and active, welcoming community.
+Join developers worldwide who are building the future with Rust. Available in **English**, **Português**, and **Español** - because great programming knowledge should be accessible to everyone.
 
-## Ready to Start?
+---
 
-Begin your Rust journey with our [Installation Guide]({{ '/lessons/installation/' | relative_url }}) or jump straight into [Hello World]({{ '/lessons/hello-world/' | relative_url }}) if you already have Rust installed.
+**Let's build something incredible together.** 🦀
 
-Happy learning! 🦀
+<script>
+// Modern scroll animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+        }
+    });
+}, observerOptions);
+
+// Observe all animation elements
+document.addEventListener('DOMContentLoaded', () => {
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
+    animateElements.forEach(el => observer.observe(el));
+});
+
+// Reading progress bar
+window.addEventListener('scroll', () => {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    
+    let progressBar = document.querySelector('.reading-progress-fill');
+    if (!progressBar) {
+        const progressContainer = document.createElement('div');
+        progressContainer.className = 'reading-progress';
+        progressBar = document.createElement('div');
+        progressBar.className = 'reading-progress-fill';
+        progressContainer.appendChild(progressBar);
+        document.body.appendChild(progressContainer);
+    }
+    
+    progressBar.style.width = scrolled + '%';
+});
+
+// Enhanced CTA button interaction
+document.addEventListener('DOMContentLoaded', () => {
+    const ctaButton = document.querySelector('.cta-button');
+    if (ctaButton) {
+        ctaButton.addEventListener('mouseenter', () => {
+            ctaButton.style.transform = 'translateY(-4px) scale(1.02)';
+        });
+        
+        ctaButton.addEventListener('mouseleave', () => {
+            ctaButton.style.transform = 'translateY(0) scale(1)';
+        });
+    }
+});
+</script>

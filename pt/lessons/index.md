@@ -4,74 +4,142 @@ title: Lições
 lang: pt
 ---
 
-# Lições do Incrível Rust
+<div class="hero lessons-hero">
+    <div class="hero-content">
+        <div class="hero-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Original_Ferris.svg/800px-Original_Ferris.svg.png" alt="Ferris o Caranguejo Rust" width="100" height="100">
+        </div>
+        <h1>Lições do Incrível Rust</h1>
+        <p>Domine a programação Rust com nosso currículo abrangente e progressivamente estruturado. De iniciante absoluto a especialista em programação de sistemas.</p>
+    </div>
+</div>
 
-Bem-vindo ao currículo completo do Incrível Rust! Nossas lições são organizadas de forma progressiva, começando com os conceitos básicos e avançando para tópicos mais complexos.
+<div class="learning-path">
+    <h2>Sua Jornada de Aprendizado</h2>
+    
+    <div class="path-grid">
+        <div class="path-card animate-on-scroll">
+            <h3>🌱 Primeiros Passos</h3>
+            <p>Ponto de entrada perfeito para novatos na programação Rust.</p>
+            <ul class="path-lessons">
+                <li><a href="{{ '/pt/lessons_pt/instalacao/' | relative_url }}">Instalação & Configuração</a></li>
+                <li><a href="{{ '/pt/lessons_pt/ola-mundo/' | relative_url }}">Olá Mundo</a></li>
+                <li><em>Gerenciador de Pacotes Cargo</em></li>
+            </ul>
+        </div>
 
-## 🌱 Primeiros Passos
+        <div class="path-card animate-on-scroll">
+            <h3>🏗️ Fundamentos do Rust</h3>
+            <p>Conceitos centrais que formam a base do domínio do Rust.</p>
+            <ul class="path-lessons">
+                <li><a href="{{ '/pt/lessons_pt/variaveis/' | relative_url }}">Variáveis & Mutabilidade</a></li>
+                <li><em>Tipos de Dados</em></li>
+                <li><em>Funções & Controle de Fluxo</em></li>
+                <li><em>Structs & Enums</em></li>
+            </ul>
+        </div>
 
-Comece sua jornada Rust aqui. Essas lições cobrem o básico absoluto:
+        <div class="path-card animate-on-scroll">
+            <h3>🎯 Sistema de Ownership</h3>
+            <p>A abordagem revolucionária do Rust para segurança de memória sem garbage collection.</p>
+            <ul class="path-lessons">
+                <li><a href="{{ '/pt/lessons/ownership/' | relative_url }}">Entendendo Ownership</a></li>
+                <li><a href="{{ '/pt/lessons/referencias/' | relative_url }}">Referências & Borrowing</a></li>
+                <li><a href="{{ '/pt/lessons/slices/' | relative_url }}">Slices</a></li>
+                <li><em>Smart Pointers</em></li>
+            </ul>
+        </div>
 
-- [**Instalação**]({{ '/pt/lessons_pt/instalacao/' | relative_url }}) - Configure seu ambiente de desenvolvimento Rust
-- [**Olá Mundo**]({{ '/pt/lessons_pt/ola-mundo/' | relative_url }}) - Escreva e execute seu primeiro programa Rust
-- *Em breve - Gerenciador de Pacotes Cargo* - Aprenda a usar o sistema de build do Rust
+        <div class="path-card animate-on-scroll">
+            <h3>🔧 Construindo Programas Complexos</h3>
+            <p>Organize e estruture aplicações maiores com confiança.</p>
+            <ul class="path-lessons">
+                <li><a href="{{ '/pt/lessons/structs/' | relative_url }}">Structs & Tipos Customizados</a></li>
+                <li><a href="{{ '/pt/lessons/enums/' | relative_url }}">Enums & Pattern Matching</a></li>
+                <li><a href="{{ '/pt/lessons/modulos/' | relative_url }}">Módulos & Pacotes</a></li>
+                <li><a href="{{ '/pt/lessons/tratamento-de-erros/' | relative_url }}">Tratamento de Erros</a></li>
+            </ul>
+        </div>
 
-## 🏗️ Fundamentos do Rust
+        <div class="path-card animate-on-scroll">
+            <h3>🚀 Tópicos Avançados</h3>
+            <p>Domine programação de sistemas avançada e domínios especializados.</p>
+            <ul class="path-lessons">
+                <li><a href="{{ '/lessons/networking-fundamentals/' | relative_url }}">Programação de Rede</a></li>
+                <li><a href="{{ '/lessons/distributed-systems/' | relative_url }}">Sistemas Distribuídos</a></li>
+                <li><a href="{{ '/lessons/blockchain-development/' | relative_url }}">Desenvolvimento Blockchain</a></li>
+                <li><a href="{{ '/lessons/machine-learning/' | relative_url }}">Machine Learning</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
 
-Conceitos centrais que todo programador Rust deve dominar:
+<div class="learning-tips">
+    <h2>Estratégia de Aprendizado</h2>
+    <div class="tips-grid">
+        <div class="tip-card animate-on-scroll">
+            <h3>📈 Caminho Recomendado</h3>
+            <ol>
+                <li><strong>Primeiros Passos</strong> - Configuração do ambiente e familiarização básica</li>
+                <li><strong>Fundamentos</strong> - Domine sintaxe e conceitos centrais</li>
+                <li><strong>Ownership</strong> - O coração da programação Rust</li>
+                <li><strong>Programas Complexos</strong> - Construção de aplicações do mundo real</li>
+                <li><strong>Tópicos Avançados</strong> - Expertise em domínios especializados</li>
+            </ol>
+        </div>
+        
+        <div class="tip-card animate-on-scroll">
+            <h3>💡 Dicas de Sucesso</h3>
+            <ul>
+                <li><strong>Pratique Diariamente</strong> - Consistência constrói maestria</li>
+                <li><strong>Experimente Livremente</strong> - Todos os exemplos são interativos</li>
+                <li><strong>Tome Seu Tempo</strong> - Conceitos de ownership precisam de paciência</li>
+                <li><strong>Participe da Comunidade</strong> - Aprenda junto, cresça mais rápido</li>
+            </ul>
+        </div>
+    </div>
+</div>
 
-- [**Variáveis e Mutabilidade**]({{ '/pt/lessons_pt/variaveis/' | relative_url }}) - Entenda a abordagem única do Rust para dados
-- *Em breve - Tipos de Dados* - Explore o sistema de tipos do Rust
-- *Em breve - Funções* - Organize código com funções
-- *Em breve - Controle de Fluxo* - Condicionais e loops
+<div class="cta-section">
+    <h2>🚀 Pronto para Começar Sua Jornada?</h2>
+    <p>Seja você um iniciante completo ou um desenvolvedor experiente, comece com os fundamentos e progrida no seu próprio ritmo.</p>
+    <div class="cta-buttons">
+        <a href="{{ '/pt/lessons_pt/instalacao/' | relative_url }}" class="cta-button primary">Começar com Instalação</a>
+        <a href="{{ '/pt/lessons_pt/ola-mundo/' | relative_url }}" class="cta-button secondary">Pular para Olá Mundo</a>
+    </div>
+</div>
 
-## 🎯 Sistema de Ownership
+<script>
+// Animações de scroll aprimoradas
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
 
-A característica mais distintiva do Rust - segurança de memória sem garbage collector:
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+        }
+    });
+}, observerOptions);
 
-- [**Entendendo Ownership**]({{ '/pt/lessons/ownership/' | relative_url }}) - O conceito central do Rust
-- [**Referências e Borrowing**]({{ '/pt/lessons/referencias/' | relative_url }}) - Compartilhe dados com segurança
-- [**Slices**]({{ '/pt/lessons/slices/' | relative_url }}) - Trabalhe com partes de coleções
+document.addEventListener('DOMContentLoaded', () => {
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
+    animateElements.forEach(el => observer.observe(el));
+});
 
-## 🔧 Construindo Programas Complexos
-
-Organize e estruture aplicações maiores:
-
-- [**Structs**]({{ '/pt/lessons/structs/' | relative_url }}) - Dados estruturados personalizados
-- [**Enums e Pattern Matching**]({{ '/pt/lessons/enums/' | relative_url }}) - Tipos de dados poderosos
-- [**Módulos e Pacotes**]({{ '/pt/lessons/modulos/' | relative_url }}) - Organize seu código
-- [**Tratamento de Erros**]({{ '/pt/lessons/tratamento-de-erros/' | relative_url }}) - Lide com falhas graciosamente
-
-## 🚀 Tópicos Avançados
-
-Leve suas habilidades em Rust para o próximo nível com programação de sistemas avançada:
-
-- [**Fundamentos de Programação de Rede**]({{ '/lessons/networking-fundamentals/' | relative_url }}) - TCP/UDP, HTTP, WebSockets e networking assíncrono
-- [**Sistemas Distribuídos com Rust**]({{ '/lessons/distributed-systems/' | relative_url }}) - Microsserviços, algoritmos de consenso e streaming de eventos
-- [**Desenvolvimento Blockchain**]({{ '/lessons/blockchain-development/' | relative_url }}) - Construa aplicações blockchain do zero
-- [**Machine Learning com Rust**]({{ '/lessons/machine-learning/' | relative_url }}) - Algoritmos de ML, redes neurais e processamento de dados
-
-## 📈 Caminho de Aprendizado Recomendado
-
-1. **Comece com Primeiros Passos** - Configure seu ambiente e familiarize-se com Rust
-2. **Domine os Fundamentos** - Aprenda sintaxe básica e conceitos
-3. **Entenda Ownership** - Esta é a parte mais importante para dominar Rust
-4. **Construa Programas Reais** - Use structs, enums e módulos para criar aplicações
-5. **Explore Tópicos Avançados** - Mergulhe em networking, sistemas distribuídos, blockchain e machine learning
-
-## 💡 Dicas para o Sucesso
-
-- **Pratique Regularmente**: Escreva código todos os dias, mesmo que seja apenas por alguns minutos
-- **Experimente os Exemplos**: Todos os exemplos de código podem ser executados e modificados
-- **Não Apresse**: Ownership pode ser desafiador - tome seu tempo para entender
-- **Participe da Comunidade**: Faça perguntas e ajude outros no GitHub
-
-## 🚀 Pronto para Começar?
-
-Se você é novo no Rust, comece com [**Instalação**]({{ '/pt/lessons/instalacao/' | relative_url }}) para configurar seu ambiente de desenvolvimento.
-
-Se você já tem Rust instalado, pule para [**Olá Mundo**]({{ '/pt/lessons/ola-mundo/' | relative_url }}) e escreva seu primeiro programa!
-
----
-
-Boa programação! 🦀
+// Interações aprimoradas dos botões CTA
+document.addEventListener('DOMContentLoaded', () => {
+    const ctaButtons = document.querySelectorAll('.cta-button');
+    ctaButtons.forEach(button => {
+        button.addEventListener('mouseenter', () => {
+            button.style.transform = 'translateY(-3px) scale(1.02)';
+        });
+        
+        button.addEventListener('mouseleave', () => {
+            button.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+});
+</script>
