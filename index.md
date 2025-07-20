@@ -10,7 +10,21 @@ title: Learn Rust Programming
         </div>
         <h1>Master Rust Programming</h1>
         <p>The ultimate learning platform for Rust programming. From beginner-friendly tutorials to advanced systems programming - unlock the power of safe, fast, and concurrent programming.</p>
-        <a href="{{ '/lessons/installation/' | relative_url }}" class="cta-button">
+        <div class="hero-stats">
+            <div class="stat">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Interactive Lessons</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">4</div>
+                <div class="stat-label">Learning Tracks</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">3</div>
+                <div class="stat-label">Languages</div>
+            </div>
+        </div>
+        <a href="{{ '/lessons/' | relative_url }}" class="cta-button">
             Start Your Journey
         </a>
     </div>
@@ -18,32 +32,32 @@ title: Learn Rust Programming
 
 <div class="features">
     <div class="feature animate-on-scroll">
-        <h3>🚀 Zero to Hero</h3>
+        <h3>Zero to Hero</h3>
         <p>Complete learning path from installation to advanced topics. No prior systems programming experience needed - just curiosity and determination.</p>
     </div>
     
     <div class="feature animate-on-scroll">
-        <h3>🛠️ Hands-On Learning</h3>
+        <h3>Hands-On Learning</h3>
         <p>Interactive code examples you can run, modify, and experiment with. Every concept comes with practical, real-world demonstrations.</p>
     </div>
     
     <div class="feature animate-on-scroll">
-        <h3>🎯 Progressive Mastery</h3>
+        <h3>Progressive Mastery</h3>
         <p>Carefully structured curriculum building from fundamentals to advanced systems programming. Master ownership, borrowing, and fearless concurrency.</p>
     </div>
     
     <div class="feature animate-on-scroll">
-        <h3>🌐 Production Ready</h3>
+        <h3>Production Ready</h3>
         <p>Learn industry best practices, testing strategies, and project organization. Build confidence with real-world patterns and architectures.</p>
     </div>
     
     <div class="feature animate-on-scroll">
-        <h3>🔬 Advanced Topics</h3>
+        <h3>Advanced Topics</h3>
         <p>Dive deep into networking, distributed systems, blockchain development, and machine learning. Push the boundaries of what's possible with Rust.</p>
     </div>
     
     <div class="feature animate-on-scroll">
-        <h3>🌟 Community Driven</h3>
+        <h3>Community Driven</h3>
         <p>Open source content that evolves with the community. Contribute lessons, suggest improvements, and help others on their Rust journey.</p>
     </div>
 </div>
@@ -53,7 +67,7 @@ title: Learn Rust Programming
 
 <div class="path-grid">
     <div class="path-card animate-on-scroll">
-        <h3>🌱 Getting Started</h3>
+        <h3>Getting Started</h3>
         <p>Perfect entry point for newcomers to Rust programming.</p>
         <ul class="path-lessons">
             <li><a href="{{ '/lessons/installation/' | relative_url }}">Installation & Setup</a></li>
@@ -63,29 +77,40 @@ title: Learn Rust Programming
     </div>
 
     <div class="path-card animate-on-scroll">
-        <h3>🏗️ Rust Fundamentals</h3>
+        <h3>Rust Fundamentals</h3>
         <p>Core concepts that form the foundation of Rust mastery.</p>
         <ul class="path-lessons">
             <li><a href="{{ '/lessons/variables/' | relative_url }}">Variables & Mutability</a></li>
             <li><a href="{{ '/lessons/data-types/' | relative_url }}">Data Types</a></li>
-            <li><em>Functions & Control Flow</em></li>
-            <li><em>Structs & Enums</em></li>
+            <li><a href="{{ '/lessons/functions/' | relative_url }}">Functions</a></li>
+            <li><a href="{{ '/lessons/control-flow/' | relative_url }}">Control Flow</a></li>
         </ul>
     </div>
 
     <div class="path-card animate-on-scroll">
-        <h3>🎯 Ownership System</h3>
+        <h3>Ownership System</h3>
         <p>Rust's revolutionary approach to memory safety without garbage collection.</p>
         <ul class="path-lessons">
-            <li><em>Understanding Ownership</em></li>
-            <li><em>References & Borrowing</em></li>
-            <li><em>Lifetimes & Slices</em></li>
-            <li><em>Smart Pointers</em></li>
+            <li><a href="{{ '/lessons/understanding-ownership/' | relative_url }}">Understanding Ownership</a></li>
+            <li><a href="{{ '/lessons/references-borrowing/' | relative_url }}">References & Borrowing</a></li>
+            <li><a href="{{ '/lessons/slices/' | relative_url }}">Slices</a></li>
+            <li><a href="{{ '/lessons/lifetimes/' | relative_url }}">Lifetimes</a></li>
         </ul>
     </div>
 
     <div class="path-card animate-on-scroll">
-        <h3>🚀 Advanced Topics</h3>
+        <h3>Building Complex Programs</h3>
+        <p>Organize and structure larger applications with confidence.</p>
+        <ul class="path-lessons">
+            <li><a href="{{ '/lessons/structs/' | relative_url }}">Structs & Custom Types</a></li>
+            <li><a href="{{ '/lessons/enums/' | relative_url }}">Enums & Pattern Matching</a></li>
+            <li><a href="{{ '/lessons/modules/' | relative_url }}">Modules & Packages</a></li>
+            <li><a href="{{ '/lessons/error-handling/' | relative_url }}">Error Handling</a></li>
+        </ul>
+    </div>
+
+    <div class="path-card animate-on-scroll">
+        <h3>Advanced Topics</h3>
         <p>Master advanced systems programming and specialized domains.</p>
         <ul class="path-lessons">
             <li><a href="{{ '/lessons/networking-fundamentals/' | relative_url }}">Network Programming</a></li>
@@ -128,6 +153,32 @@ title: Learn Rust Programming
         <div class="why-rust-item animate-on-scroll">
             <h3>💼 Industry Adoption</h3>
             <p>Used by tech giants like Microsoft, Google, Facebook, and Dropbox. From system programming to web development.</p>
+        </div>
+    </div>
+</div>
+
+<div class="showcase">
+    <h2>Learn with Real Examples</h2>
+    <div class="showcase-grid">
+        <div class="showcase-item animate-on-scroll">
+            <div class="showcase-icon">🚀</div>
+            <h3>Performance-Critical Systems</h3>
+            <p>Build web servers, game engines, and operating systems that rival C/C++ in speed while maintaining memory safety.</p>
+            <div class="showcase-tech">Web Servers • Game Engines • OS Development</div>
+        </div>
+        
+        <div class="showcase-item animate-on-scroll">
+            <div class="showcase-icon">🌐</div>
+            <h3>Web & Blockchain</h3>
+            <p>Create modern web applications with Rocket or Axum, and dive into blockchain development with Substrate.</p>
+            <div class="showcase-tech">Web APIs • Smart Contracts • DeFi Protocols</div>
+        </div>
+        
+        <div class="showcase-item animate-on-scroll">
+            <div class="showcase-icon">🤖</div>
+            <h3>AI & Machine Learning</h3>
+            <p>Leverage Rust's performance for ML workloads, data processing, and building high-performance AI inference engines.</p>
+            <div class="showcase-tech">Neural Networks • Data Processing • GPU Computing</div>
         </div>
     </div>
 </div>

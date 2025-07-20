@@ -33,8 +33,8 @@ title: Lessons
             <ul class="path-lessons">
                 <li><a href="{{ '/lessons/variables/' | relative_url }}">Variables & Mutability</a></li>
                 <li><a href="{{ '/lessons/data-types/' | relative_url }}">Data Types</a></li>
-                <li><em>Functions & Control Flow</em></li>
-                <li><em>Structs & Enums</em></li>
+                <li><a href="{{ '/lessons/functions/' | relative_url }}">Functions</a></li>
+                <li><a href="{{ '/lessons/control-flow/' | relative_url }}">Control Flow</a></li>
             </ul>
         </div>
 
@@ -42,10 +42,10 @@ title: Lessons
             <h3>🎯 Ownership System</h3>
             <p>Rust's revolutionary approach to memory safety without garbage collection.</p>
             <ul class="path-lessons">
-                <li><em>Understanding Ownership</em></li>
-                <li><em>References & Borrowing</em></li>
-                <li><em>Lifetimes & Slices</em></li>
-                <li><em>Smart Pointers</em></li>
+                <li><a href="{{ '/lessons/understanding-ownership/' | relative_url }}">Understanding Ownership</a></li>
+                <li><a href="{{ '/lessons/references-borrowing/' | relative_url }}">References & Borrowing</a></li>
+                <li><a href="{{ '/lessons/slices/' | relative_url }}">Slices</a></li>
+                <li><a href="{{ '/lessons/lifetimes/' | relative_url }}">Lifetimes</a></li>
             </ul>
         </div>
 
@@ -53,10 +53,10 @@ title: Lessons
             <h3>🔧 Building Complex Programs</h3>
             <p>Organize and structure larger applications with confidence.</p>
             <ul class="path-lessons">
-                <li><em>Structs & Custom Types</em></li>
-                <li><em>Enums & Pattern Matching</em></li>
-                <li><em>Modules & Packages</em></li>
-                <li><em>Error Handling</em></li>
+                <li><a href="{{ '/lessons/structs/' | relative_url }}">Structs & Custom Types</a></li>
+                <li><a href="{{ '/lessons/enums/' | relative_url }}">Enums & Pattern Matching</a></li>
+                <li><a href="{{ '/lessons/modules/' | relative_url }}">Modules & Packages</a></li>
+                <li><a href="{{ '/lessons/error-handling/' | relative_url }}">Error Handling</a></li>
             </ul>
         </div>
 

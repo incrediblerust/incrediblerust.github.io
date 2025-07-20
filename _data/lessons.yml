@@ -1,0 +1,180 @@
+# Lesson structure data for all languages
+fundamentals:
+  - id: "variables"
+    title: 
+      en: "Variables & Mutability"
+      pt: "Variáveis & Mutabilidade"
+      es: "Variables & Mutabilidad"
+    path:
+      en: "/lessons/variables/"
+      pt: "/pt/lessons_pt/variaveis/"
+      es: "/es/lessons/variables/"
+    available: true
+
+  - id: "data-types"
+    title:
+      en: "Data Types"
+      pt: "Tipos de Dados"
+      es: "Tipos de Datos"
+    path:
+      en: "/lessons/data-types/"
+      pt: "/pt/lessons/data-types/"
+      es: "/es/lessons/tipos-de-datos/"
+    available: true
+
+  - id: "functions"
+    title:
+      en: "Functions"
+      pt: "Funções"
+      es: "Funciones"
+    path:
+      en: "/lessons/functions/"
+      pt: "/pt/lessons/functions/"
+      es: "/es/lessons/functions/"
+    available: true
+
+  - id: "control-flow"
+    title:
+      en: "Control Flow"
+      pt: "Controle de Fluxo"
+      es: "Control de Flujo"
+    path:
+      en: "/lessons/control-flow/"
+      pt: "/pt/lessons/control-flow/"
+      es: "/es/lessons/control-flow/"
+    available: true
+
+ownership:
+  - id: "understanding-ownership"
+    title:
+      en: "Understanding Ownership"
+      pt: "Entendendo Ownership"
+      es: "Entendiendo Ownership"
+    path:
+      en: "/lessons/understanding-ownership/"
+      pt: "/lessons/understanding-ownership/"
+      es: "/lessons/understanding-ownership/"
+    available: true
+
+  - id: "references-borrowing"
+    title:
+      en: "References & Borrowing"
+      pt: "Referências & Borrowing"
+      es: "Referencias & Borrowing"
+    path:
+      en: "/lessons/references-borrowing/"
+      pt: "/lessons/references-borrowing/"
+      es: "/lessons/references-borrowing/"
+    available: true
+
+  - id: "slices"
+    title:
+      en: "Slices"
+      pt: "Slices"
+      es: "Slices"
+    path:
+      en: "/lessons/slices/"
+      pt: "/lessons/slices/"
+      es: "/lessons/slices/"
+    available: true
+
+  - id: "lifetimes"
+    title:
+      en: "Lifetimes"
+      pt: "Lifetimes"
+      es: "Lifetimes"
+    path:
+      en: "/lessons/lifetimes/"
+      pt: "/lessons/lifetimes/"
+      es: "/lessons/lifetimes/"
+    available: true
+
+complex:
+  - id: "structs"
+    title:
+      en: "Structs & Custom Types"
+      pt: "Structs & Tipos Customizados"
+      es: "Structs & Tipos Personalizados"
+    path:
+      en: "/lessons/structs/"
+      pt: "/lessons/structs/"
+      es: "/lessons/structs/"
+    available: true
+
+  - id: "enums"
+    title:
+      en: "Enums & Pattern Matching"
+      pt: "Enums & Pattern Matching"
+      es: "Enums & Pattern Matching"
+    path:
+      en: "/lessons/enums/"
+      pt: "/lessons/enums/"
+      es: "/lessons/enums/"
+    available: true
+
+  - id: "modules"
+    title:
+      en: "Modules & Packages"
+      pt: "Módulos & Pacotes"
+      es: "Módulos & Paquetes"
+    path:
+      en: "/lessons/modules/"
+      pt: "/lessons/modules/"
+      es: "/lessons/modules/"
+    available: true
+
+  - id: "error-handling"
+    title:
+      en: "Error Handling"
+      pt: "Tratamento de Erros"
+      es: "Manejo de Errores"
+    path:
+      en: "/lessons/error-handling/"
+      pt: "/lessons/error-handling/"
+      es: "/lessons/error-handling/"
+    available: true
+
+advanced:
+  - id: "networking-fundamentals"
+    title:
+      en: "Network Programming"
+      pt: "Programação de Rede"
+      es: "Programación de Red"
+    path:
+      en: "/lessons/networking-fundamentals/"
+      pt: "/lessons/networking-fundamentals/"
+      es: "/lessons/networking-fundamentals/"
+    available: true
+
+  - id: "distributed-systems"
+    title:
+      en: "Distributed Systems"
+      pt: "Sistemas Distribuídos"
+      es: "Sistemas Distribuidos"
+    path:
+      en: "/lessons/distributed-systems/"
+      pt: "/lessons/distributed-systems/"
+      es: "/lessons/distributed-systems/"
+    available: true
+
+  - id: "blockchain-development"
+    title:
+      en: "Blockchain Development"
+      pt: "Desenvolvimento Blockchain"
+      es: "Desarrollo Blockchain"
+    path:
+      en: "/lessons/blockchain-development/"
+      pt: "/lessons/blockchain-development/"
+      es: "/lessons/blockchain-development/"
+    available: true
+
+  - id: "machine-learning"
+    title:
+      en: "Machine Learning"
+      pt: "Machine Learning"
+      es: "Machine Learning"
+    path:
+      en: "/lessons/machine-learning/"
+      pt: "/lessons/machine-learning/"
+      es: "/lessons/machine-learning/"
+    available: true

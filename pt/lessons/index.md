@@ -34,8 +34,8 @@ lang: pt
             <ul class="path-lessons">
                 <li><a href="{{ '/pt/lessons_pt/variaveis/' | relative_url }}">Variáveis & Mutabilidade</a></li>
                 <li><em>Tipos de Dados</em></li>
-                <li><em>Funções & Controle de Fluxo</em></li>
-                <li><em>Structs & Enums</em></li>
+                <li><a href="{{ '/pt/lessons/functions/' | relative_url }}">Funções</a></li>
+                <li><em>Controle de Fluxo</em></li>
             </ul>
         </div>
 
@@ -43,10 +43,10 @@ lang: pt
             <h3>🎯 Sistema de Ownership</h3>
             <p>A abordagem revolucionária do Rust para segurança de memória sem garbage collection.</p>
             <ul class="path-lessons">
-                <li><a href="{{ '/pt/lessons/ownership/' | relative_url }}">Entendendo Ownership</a></li>
-                <li><a href="{{ '/pt/lessons/referencias/' | relative_url }}">Referências & Borrowing</a></li>
-                <li><a href="{{ '/pt/lessons/slices/' | relative_url }}">Slices</a></li>
-                <li><em>Smart Pointers</em></li>
+                <li><a href="{{ '/lessons/understanding-ownership/' | relative_url }}">Entendendo Ownership</a></li>
+                <li><a href="{{ '/lessons/references-borrowing/' | relative_url }}">Referências & Borrowing</a></li>
+                <li><a href="{{ '/lessons/slices/' | relative_url }}">Slices</a></li>
+                <li><a href="{{ '/lessons/lifetimes/' | relative_url }}">Lifetimes</a></li>
             </ul>
         </div>
 
@@ -54,10 +54,10 @@ lang: pt
             <h3>🔧 Construindo Programas Complexos</h3>
             <p>Organize e estruture aplicações maiores com confiança.</p>
             <ul class="path-lessons">
-                <li><a href="{{ '/pt/lessons/structs/' | relative_url }}">Structs & Tipos Customizados</a></li>
-                <li><a href="{{ '/pt/lessons/enums/' | relative_url }}">Enums & Pattern Matching</a></li>
-                <li><a href="{{ '/pt/lessons/modulos/' | relative_url }}">Módulos & Pacotes</a></li>
-                <li><a href="{{ '/pt/lessons/tratamento-de-erros/' | relative_url }}">Tratamento de Erros</a></li>
+                <li><a href="{{ '/lessons/structs/' | relative_url }}">Structs & Tipos Customizados</a></li>
+                <li><a href="{{ '/lessons/enums/' | relative_url }}">Enums & Pattern Matching</a></li>
+                <li><a href="{{ '/lessons/modules/' | relative_url }}">Módulos & Pacotes</a></li>
+                <li><a href="{{ '/lessons/error-handling/' | relative_url }}">Tratamento de Erros</a></li>
             </ul>
         </div>
 
