@@ -9,20 +9,8 @@ url: "https://incrediblerust.github.io"
 # Multilingual settings
 languages: ["en", "pt", "es"]
 default_lang: "en"
-exclude_from_localization: ["assets", "vendor"]
 
-# Build settings
-markdown: kramdown
-highlighter: rouge
-permalink: pretty
-
-# Plugins
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
-
-# Collections
+# Content collections (used by Rust generator)
 collections:
   lessons:
     output: true
@@ -34,7 +22,7 @@ collections:
     output: true
     permalink: /es/:collection/:name/
 
-# Defaults
+# Default values for content types
 defaults:
   - scope:
       path: ""
@@ -54,35 +42,22 @@ defaults:
     values:
       layout: "lesson"
       lang: "es"
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
 
-# Exclude from processing
+# Files to exclude from processing
 exclude:
-  - Gemfile
-  - Gemfile.lock
+  - src/
+  - target/
+  - Cargo.toml
+  - Cargo.lock
+  - build.sh
+  - templates/
+  - GENERATOR_README.md
+  - TAREFAS_MODERNIZACAO_WEB_DESIGN_2025.md
   - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
   - README.md
   - LICENSE
 
-# Kramdown settings
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    css_class: 'highlight'
-    span:
-      line_numbers: false
-    block:
-      line_numbers: true
-
-# Site data
+# Site metadata
 version: "1.0.0"
 rust_version: "1.85.0"
+generator: "Custom Rust Static Site Generator"

@@ -1,0 +1,17 @@
+/Users/fazapp/projects/opensource/incrediblerust.github.io/target/debug/deps/unic_ucd_segment-dc5d5e37a6180cec.d: /Users/fazapp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-ucd-segment-0.9.0/src/lib.rs /Users/fazapp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-ucd-segment-0.9.0/src/pkg_info.rs /Users/fazapp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-ucd-segment-0.9.0/src/grapheme_cluster_break.rs /Users/fazapp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-ucd-segment-0.9.0/src/sentence_break.rs /Users/fazapp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-ucd-segment-0.9.0/src/word_break.rs /Users/fazapp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-ucd-segment-0.9.0/src/../tables/grapheme_cluster_break.rsv /Users/fazapp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-ucd-segment-0.9.0/src/../tables/sentence_break.rsv /Users/fazapp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-ucd-segment-0.9.0/src/../tables/word_break.rsv /Users/fazapp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-ucd-segment-0.9.0/src/../tables/unicode_version.rsv
+
+/Users/fazapp/projects/opensource/incrediblerust.github.io/target/debug/deps/libunic_ucd_segment-dc5d5e37a6180cec.rmeta: /Users/fazapp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-ucd-segment-0.9.0/src/lib.rs /Users/fazapp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-ucd-segment-0.9.0/src/pkg_info.rs /Users/fazapp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-ucd-segment-0.9.0/src/grapheme_cluster_break.rs /Users/fazapp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-ucd-segment-0.9.0/src/sentence_break.rs /Users/fazapp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-ucd-segment-0.9.0/src/word_break.rs /Users/fazapp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-ucd-segment-0.9.0/src/../tables/grapheme_cluster_break.rsv /Users/fazapp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-ucd-segment-0.9.0/src/../tables/sentence_break.rsv /Users/fazapp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-ucd-segment-0.9.0/src/../tables/word_break.rsv /Users/fazapp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-ucd-segment-0.9.0/src/../tables/unicode_version.rsv
+
+/Users/fazapp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-ucd-segment-0.9.0/src/lib.rs:
+/Users/fazapp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-ucd-segment-0.9.0/src/pkg_info.rs:
+/Users/fazapp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-ucd-segment-0.9.0/src/grapheme_cluster_break.rs:
+/Users/fazapp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-ucd-segment-0.9.0/src/sentence_break.rs:
+/Users/fazapp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-ucd-segment-0.9.0/src/word_break.rs:
+/Users/fazapp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-ucd-segment-0.9.0/src/../tables/grapheme_cluster_break.rsv:
+/Users/fazapp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-ucd-segment-0.9.0/src/../tables/sentence_break.rsv:
+/Users/fazapp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-ucd-segment-0.9.0/src/../tables/word_break.rsv:
+/Users/fazapp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-ucd-segment-0.9.0/src/../tables/unicode_version.rsv:
+
+# env-dep:CARGO_PKG_DESCRIPTION=UNIC — Unicode Character Database — Segmentation Properties
+# env-dep:CARGO_PKG_NAME=unic-ucd-segment
+# env-dep:CARGO_PKG_VERSION=0.9.0

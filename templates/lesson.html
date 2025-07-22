@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="lesson-container">
+    <aside class="lesson-sidebar">
+        <nav class="lesson-nav">
+            <h3>{{ t.nav.lessons }}</h3>
+            
+            {% if lang == "en" %}
+                <div class="lesson-category">
+                    <h4>{{ t.sections.getting_started }}</h4>
+                    <ul>
+                        <li><a href="/lessons/installation/">Installation</a></li>
+                        <li><a href="/lessons/hello-world/">Hello World</a></li>
+                        <li><a href="/lessons/cargo/">Cargo Package Manager</a></li>
+                    </ul>
+                </div>
+                
+                <div class="lesson-category">
+                    <h4>{{ t.sections.fundamentals }}</h4>
+                    <ul>
+                        <li><a href="/lessons/variables/">Variables and Mutability</a></li>
+                        <li><a href="/lessons/data-types/">Data Types</a></li>
+                        <li><a href="/lessons/functions/">Functions</a></li>
+                        <li><a href="/lessons/control-flow/">Control Flow</a></li>
+                    </ul>
+                </div>
+                
+                <div class="lesson-category">
+                    <h4>{{ t.sections.ownership }}</h4>
+                    <ul>
+                        <li><a href="/lessons/understanding-ownership/">Understanding Ownership</a></li>
+                        <li><a href="/lessons/references-borrowing/">References and Borrowing</a></li>
+                        <li><a href="/lessons/slices/">Slices</a></li>
+                        <li><a href="/lessons/lifetimes/">Lifetimes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="lesson-category">
+                    <h4>{{ t.sections.complex_programs }}</h4>
+                    <ul>
+                        <li><a href="/lessons/structs/">Structs</a></li>
+                        <li><a href="/lessons/enums/">Enums and Pattern Matching</a></li>
+                        <li><a href="/lessons/modules/">Modules and Packages</a></li>
+                        <li><a href="/lessons/error-handling/">Error Handling</a></li>
+                    </ul>
+                </div>
+            {% elif lang == "pt" %}
+                <div class="lesson-category">
+                    <h4>{{ t.sections.getting_started }}</h4>
+                    <ul>
+                        <li><a href="/pt/lessons/instalacao/">Instalação</a></li>
+                        <li><a href="/pt/lessons/ola-mundo/">Olá Mundo</a></li>
+                        <li><a href="/pt/lessons/cargo/">Gerenciador de Pacotes Cargo</a></li>
+                    </ul>
+                </div>
+                
+                <div class="lesson-category">
+                    <h4>{{ t.sections.fundamentals }}</h4>
+                    <ul>
+                        <li><a href="/pt/lessons/variaveis/">Variáveis e Mutabilidade</a></li>
+                        <li><a href="/pt/lessons/tipos-de-dados/">Tipos de Dados</a></li>
+                        <li><a href="/pt/lessons/funcoes/">Funções</a></li>
+                        <li><a href="/pt/lessons/controle-de-fluxo/">Controle de Fluxo</a></li>
+                    </ul>
+                </div>
+            {% elif lang == "es" %}
+                <div class="lesson-category">
+                    <h4>{{ t.sections.getting_started }}</h4>
+                    <ul>
+                        <li><a href="/es/lessons/instalacion/">Instalación</a></li>
+                        <li><a href="/es/lessons/hola-mundo/">Hola Mundo</a></li>
+                        <li><a href="/es/lessons/cargo/">Gestor de Paquetes Cargo</a></li>
+                    </ul>
+                </div>
+                
+                <div class="lesson-category">
+                    <h4>{{ t.sections.fundamentals }}</h4>
+                    <ul>
+                        <li><a href="/es/lessons/variables/">Variables y Mutabilidad</a></li>
+                        <li><a href="/es/lessons/tipos-de-datos/">Tipos de Datos</a></li>
+                        <li><a href="/es/lessons/funciones/">Funciones</a></li>
+                        <li><a href="/es/lessons/control-de-flujo/">Control de Flujo</a></li>
+                    </ul>
+                </div>
+            {% endif %}
+        </nav>
+    </aside>
+    
+    <article class="lesson-content">
+        <header class="lesson-header">
+            <h1 class="lesson-title">{{ page.title }}</h1>
+            {% if page.difficulty %}
+                <span class="lesson-difficulty lesson-difficulty-{{ page.difficulty }}">{{ page.difficulty | title }}</span>
+            {% endif %}
+            {% if page.version %}
+                <span class="lesson-version">Rust {{ page.version }}</span>
+            {% endif %}
+        </header>
+        
+        <div class="lesson-body">
+            {{ content | safe }}
+        </div>
+        
+        <footer class="lesson-footer">
+            <div class="lesson-navigation">
+                {% if page.prev_lesson %}
+                    <a href="{{ page.prev_lesson }}" class="lesson-nav-link lesson-nav-prev">
+                        ← {{ t.lesson.previous }}: {{ page.prev_lesson_title }}
+                    </a>
+                {% endif %}
+                
+                {% if page.next_lesson %}
+                    <a href="{{ page.next_lesson }}" class="lesson-nav-link lesson-nav-next">
+                        {{ t.lesson.next }}: {{ page.next_lesson_title }} →
+                    </a>
+                {% endif %}
+            </div>
+            
+            <div class="lesson-edit">
+                <a href="https://github.com/incrediblerust/incrediblerust.github.io/edit/main/{{ page.path }}" target="_blank">
+                    {{ t.lesson.edit }}
+                </a>
+            </div>
+        </footer>
+    </article>
+</div>
+{% endblock content %}
