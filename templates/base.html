@@ -76,11 +76,13 @@
                         
                         <!-- Modern Language Switcher -->
                         <div class="language-switcher">
-                            <button class="lang-button" onclick="toggleLanguageMenu()" aria-label="Select Language" aria-expanded="false">
+                            <button class="lang-button" onclick="toggleLanguageMenu()" aria-label="Selecionar Idioma" aria-expanded="false">
                                 <span class="lang-flag">
-                                    {% if lang == "en" %}🇺🇸{% elif lang == "pt" %}🇧🇷{% elif lang == "es" %}🇪🇸{% endif %}
+                                    {% if lang == "en" %}🇺🇸{% elif lang == "pt" %}🇧🇷{% elif lang == "es" %}🇪🇸{% else %}🇺🇸{% endif %}
                                 </span>
-                                <span class="lang-text">{{ t.languages[lang] | default(value="English") }}</span>
+                                <span class="lang-text">
+                                    {% if lang == "en" %}English{% elif lang == "pt" %}Português{% elif lang == "es" %}Español{% else %}English{% endif %}
+                                </span>
                                 <svg class="lang-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
                                     <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
@@ -88,18 +90,24 @@
                             <div class="lang-menu" id="langMenu" role="menu">
                                 <a href="/" class="lang-option {% if lang == 'en' %}active{% endif %}" role="menuitem">
                                     <span class="lang-flag">🇺🇸</span>
-                                    <span class="lang-name">English</span>
-                                    <span class="lang-native">English</span>
+                                    <span class="lang-details">
+                                        <span class="lang-name">English</span>
+                                        <span class="lang-native">English</span>
+                                    </span>
                                 </a>
                                 <a href="/pt/" class="lang-option {% if lang == 'pt' %}active{% endif %}" role="menuitem">
                                     <span class="lang-flag">🇧🇷</span>
-                                    <span class="lang-name">Português</span>
-                                    <span class="lang-native">Português</span>
+                                    <span class="lang-details">
+                                        <span class="lang-name">Português</span>
+                                        <span class="lang-native">Português (Brasil)</span>
+                                    </span>
                                 </a>
                                 <a href="/es/" class="lang-option {% if lang == 'es' %}active{% endif %}" role="menuitem">
                                     <span class="lang-flag">🇪🇸</span>
-                                    <span class="lang-name">Español</span>
-                                    <span class="lang-native">Español</span>
+                                    <span class="lang-details">
+                                        <span class="lang-name">Español</span>
+                                        <span class="lang-native">Español</span>
+                                    </span>
                                 </a>
                             </div>
                         </div>
@@ -146,26 +154,85 @@
             const isOpen = menu.classList.contains('show');
             
             if (isOpen) {
-                menu.classList.remove('show');
-                button.setAttribute('aria-expanded', 'false');
-                arrow.style.transform = 'rotate(0deg)';
+                closeLanguageMenu();
             } else {
-                menu.classList.add('show');
-                button.setAttribute('aria-expanded', 'true');
-                arrow.style.transform = 'rotate(180deg)';
+                openLanguageMenu();
             }
         }
         
-        document.addEventListener('click', function(event) {
-            const switcher = document.querySelector('.language-switcher');
+        function openLanguageMenu() {
             const menu = document.getElementById('langMenu');
             const button = document.querySelector('.lang-button');
             const arrow = document.querySelector('.lang-arrow');
             
+            menu.classList.add('show');
+            button.setAttribute('aria-expanded', 'true');
+            arrow.style.transform = 'rotate(180deg)';
+            
+            // Focus first menu item for accessibility
+            const firstOption = menu.querySelector('.lang-option');
+            if (firstOption) {
+                firstOption.focus();
+            }
+        }
+        
+        function closeLanguageMenu() {
+            const menu = document.getElementById('langMenu');
+            const button = document.querySelector('.lang-button');
+            const arrow = document.querySelector('.lang-arrow');
+            
+            menu.classList.remove('show');
+            button.setAttribute('aria-expanded', 'false');
+            arrow.style.transform = 'rotate(0deg)';
+        }
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const switcher = document.querySelector('.language-switcher');
+            const menu = document.getElementById('langMenu');
+            
             if (!switcher.contains(event.target) && menu.classList.contains('show')) {
-                menu.classList.remove('show');
-                button.setAttribute('aria-expanded', 'false');
-                arrow.style.transform = 'rotate(0deg)';
+                closeLanguageMenu();
+            }
+        });
+        
+        // Keyboard navigation for accessibility
+        document.addEventListener('keydown', function(event) {
+            const menu = document.getElementById('langMenu');
+            const button = document.querySelector('.lang-button');
+            
+            if (!menu.classList.contains('show')) return;
+            
+            const menuItems = menu.querySelectorAll('.lang-option');
+            const currentFocus = document.activeElement;
+            const currentIndex = Array.from(menuItems).indexOf(currentFocus);
+            
+            switch(event.key) {
+                case 'Escape':
+                    closeLanguageMenu();
+                    button.focus();
+                    event.preventDefault();
+                    break;
+                case 'ArrowDown':
+                    const nextIndex = currentIndex < menuItems.length - 1 ? currentIndex + 1 : 0;
+                    menuItems[nextIndex].focus();
+                    event.preventDefault();
+                    break;
+                case 'ArrowUp':
+                    const prevIndex = currentIndex > 0 ? currentIndex - 1 : menuItems.length - 1;
+                    menuItems[prevIndex].focus();
+                    event.preventDefault();
+                    break;
+                case 'Tab':
+                    if (event.shiftKey && currentIndex === 0) {
+                        closeLanguageMenu();
+                        button.focus();
+                        event.preventDefault();
+                    } else if (!event.shiftKey && currentIndex === menuItems.length - 1) {
+                        closeLanguageMenu();
+                        event.preventDefault();
+                    }
+                    break;
             }
         });
 
