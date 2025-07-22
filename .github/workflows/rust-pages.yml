@@ -1,5 +1,5 @@
 # Deploy Incredible Rust site with custom Rust static site generator
-name: Deploy Incredible Rust with Rust Generator
+name: Deploy with Rust Generator
 
 on:
   # Runs on pushes targeting the default branch
@@ -49,14 +49,30 @@ jobs:
         
       - name: Build with Rust Generator
         run: |
-          echo "🦀 Building site with Rust generator"
+          echo "🦀 Building site with custom Rust generator"
+          echo "Compiling Rust generator..."
           cargo build --release
-          cargo run --release -- --destination _site
+          echo "Running site generation..."
+          cargo run --release
+          echo "Verifying output..."
+          ls -la _site/
+          echo "Site built successfully!"
         env:
           RUST_LOG: info
           
+      - name: Verify .nojekyll exists
+        run: |
+          if [ -f "_site/.nojekyll" ]; then
+            echo "✅ .nojekyll file exists - Jekyll is disabled"
+          else
+            echo "❌ .nojekyll file missing - creating it"
+            touch _site/.nojekyll
+          fi
+          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
 
   # Deployment job
   deploy:
