@@ -211,4 +211,102 @@ impl ContentFile {
         path.push("index.html");
         path
     }
+
+    /// Get the equivalent URL for this page in other languages
+    pub fn get_language_urls(&self) -> std::collections::HashMap<String, String> {
+        let mut urls = std::collections::HashMap::new();
+        let stem = self.path.file_stem()
+            .and_then(|s| s.to_str())
+            .unwrap_or("index");
+
+        // Map common lesson names across languages
+        let lesson_map = get_lesson_translation_map();
+        
+        if let Some(collection) = &self.collection {
+            // For lessons, try to find equivalent content
+            let en_stem = match self.language.as_str() {
+                "pt" | "es" => lesson_map.get(stem).unwrap_or(&stem.to_string()).clone(),
+                _ => stem.to_string(),
+            };
+            
+            // Generate URLs for each language
+            urls.insert("en".to_string(), format!("/{}/{}/", collection, en_stem));
+            
+            // For Portuguese, find PT equivalent or fallback to main page
+            let pt_lesson = match en_stem.as_str() {
+                "hello-world" => "ola-mundo",
+                "installation" => "instalacao",
+                "variables" => "variaveis", 
+                "data-types" => "tipos-de-dados",
+                "cargo" => "cargo",
+                _ => {
+                    // Try reverse lookup from lesson_map
+                    lesson_map.iter()
+                        .find(|(_, v)| *v == &en_stem)
+                        .map(|(k, _)| k.as_str())
+                        .unwrap_or("index")
+                }
+            };
+            
+            if pt_lesson != "index" {
+                urls.insert("pt".to_string(), format!("/pt/{}/{}/", collection, pt_lesson));
+            } else {
+                urls.insert("pt".to_string(), "/pt/".to_string());
+            }
+            
+            // For Spanish, find ES equivalent or fallback to main page
+            let es_lesson = match en_stem.as_str() {
+                "hello-world" => "hola-mundo",
+                "installation" => "instalacion", 
+                "variables" => "variables",
+                "cargo" => "cargo",
+                _ => {
+                    // Try reverse lookup from lesson_map
+                    lesson_map.iter()
+                        .find(|(_, v)| *v == &en_stem)
+                        .map(|(k, _)| k.as_str())
+                        .unwrap_or("index")
+                }
+            };
+            
+            if es_lesson != "index" {
+                urls.insert("es".to_string(), format!("/es/{}/{}/", collection, es_lesson));
+            } else {
+                urls.insert("es".to_string(), "/es/".to_string());
+            }
+        } else {
+            // For regular pages
+            if stem == "index" {
+                urls.insert("en".to_string(), "/".to_string());
+                urls.insert("pt".to_string(), "/pt/".to_string());
+                urls.insert("es".to_string(), "/es/".to_string());
+            } else {
+                urls.insert("en".to_string(), format!("/{}/", stem));
+                urls.insert("pt".to_string(), format!("/pt/{}/", stem));
+                urls.insert("es".to_string(), format!("/es/{}/", stem));
+            }
+        }
+        
+        urls
+    }
+}
+
+/// Map lesson names between languages  
+fn get_lesson_translation_map() -> std::collections::HashMap<String, String> {
+    let mut map = std::collections::HashMap::new();
+    
+    // Portuguese to English mappings
+    map.insert("ola-mundo".to_string(), "hello-world".to_string());
+    map.insert("instalacao".to_string(), "installation".to_string());
+    map.insert("variaveis".to_string(), "variables".to_string());
+    map.insert("tipos-de-dados".to_string(), "data-types".to_string());
+    map.insert("cargo".to_string(), "cargo".to_string());
+    
+    // Spanish to English mappings  
+    map.insert("hola-mundo".to_string(), "hello-world".to_string());
+    map.insert("instalacion".to_string(), "installation".to_string());
+    map.insert("variables".to_string(), "variables".to_string());
+    map.insert("cargo".to_string(), "cargo".to_string());
+    
+    map
 }

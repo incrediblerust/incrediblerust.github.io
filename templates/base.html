@@ -91,21 +91,21 @@
                                 </svg>
                             </button>
                             <div class="lang-menu" id="langMenu" role="menu">
-                                <a href="/" class="lang-option {% if lang == 'en' %}active{% endif %}" role="menuitem">
+                                <a href="{{ language_urls.en | default(value='/') | safe }}" class="lang-option {% if lang == 'en' %}active{% endif %}" role="menuitem">
                                     <span class="lang-flag">🇺🇸</span>
                                     <span class="lang-details">
                                         <span class="lang-name">English</span>
                                         <span class="lang-native">English</span>
                                     </span>
                                 </a>
-                                <a href="/pt/" class="lang-option {% if lang == 'pt' %}active{% endif %}" role="menuitem">
+                                <a href="{{ language_urls.pt | default(value='/pt/') | safe }}" class="lang-option {% if lang == 'pt' %}active{% endif %}" role="menuitem">
                                     <span class="lang-flag">🇧🇷</span>
                                     <span class="lang-details">
                                         <span class="lang-name">Português</span>
                                         <span class="lang-native">Português (Brasil)</span>
                                     </span>
                                 </a>
-                                <a href="/es/" class="lang-option {% if lang == 'es' %}active{% endif %}" role="menuitem">
+                                <a href="{{ language_urls.es | default(value='/es/') | safe }}" class="lang-option {% if lang == 'es' %}active{% endif %}" role="menuitem">
                                     <span class="lang-flag">🇪🇸</span>
                                     <span class="lang-details">
                                         <span class="lang-name">Español</span>

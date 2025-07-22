@@ -136,6 +136,10 @@ impl TemplateEngine {
             }
         }
 
+        // Add language URLs for contextual language switching
+        let language_urls = content.get_language_urls();
+        context.insert("language_urls", &language_urls);
+
         // Determine layout
         let layout = content.front_matter.layout
             .as_ref()
